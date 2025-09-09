@@ -1,0 +1,125 @@
+.acqua {
+    background: var(--blue-2);
+
+
+    &__container {
+        @include responsive(padding-top, 141, 80);
+        @include responsive(padding-bottom, 66, 0);
+        position: relative;
+    }
+
+    &__xily {
+        position: absolute;
+        @include responsive(top, 100, 95);
+        @include responsive(left, 201, -18.24);
+        @include responsive(width, 588.33, 177);
+
+        img {
+            position: relative;
+            width: 100%;
+        }
+    }
+
+    &__doctor {
+        position: absolute;
+        bottom: 0;
+        @include responsive(right, 407, 17);
+        @include responsive(width, 295, 79);
+        @include responsive(height, 295, 79);
+
+        img {
+            width: 100%;
+        }
+    }
+
+    &__row {
+        margin-left: auto;
+        margin-right: auto;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        @include responsive(gap, 73, 50);
+
+        @media(max-width:768px){
+            width: 100%;
+            align-items: baseline;
+        }
+    }
+
+    &__item {
+        display: inline-block;
+
+        @media(max-width:768px){
+            &.item-one {
+                margin-left: auto;
+            }
+        }
+    }
+
+    &__item-title {
+        @include responsive(padding-left, 34, 20);
+        @include responsive(font-size, 20, 12);
+        @include responsive(margin-bottom, 6, 4);
+
+        &.two {
+            @include responsive(padding-left, 22, 18);
+        }
+    }
+
+    &__dialog {
+        position: relative;
+        @include responsive(width, 423, 260);
+        
+        &.two {
+            @include responsive(width, 423, 201);
+        }
+
+        img {
+            width: 100%;
+        }
+
+        &:not(:last-child) {
+            @include responsive(margin-bottom, 14, 9);
+        }   
+    }
+
+    &__dialog-fon {
+    }
+    
+    &__dialog-body {
+        display: flex;
+        align-items: center;
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        @include responsive(padding-top, 20, 11);
+        @include responsive(padding-bottom, 20, 11);
+        @include responsive(padding-left, 63, 36.88);
+        @include responsive(padding-right, 42, 24.59);
+        p {
+            @include responsive(font-size, 20, 13);
+            letter-spacing: 0.02em;
+            line-height: 120%;
+        }
+
+        .plus {
+            position: relative;
+            display: inline-block;
+            @include responsive(width, 24, 14.75);
+            @include responsive(height, 24, 14.75);
+            @include responsive(top, 3, 1);
+            pointer-events: none;
+        }
+
+        .three & {
+            @include responsive(padding-right, 63, 36.88);
+            @include responsive(padding-left, 42, 24.59);
+        }
+    }
+}
+.green {
+}
+.plus {
+}

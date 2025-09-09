@@ -1,0 +1,32 @@
+.running {
+    position: relative;
+    overflow: hidden;
+    display: flex;
+    align-items: center;
+    overflow: hidden;
+    @include responsive(height, 82, 42);
+    background: var(--pink);
+
+    &__row {
+        display: flex;
+        align-items: center;
+        width: max-content;
+        @include responsive(padding-right, 20, 16);
+        @include responsive(gap, 20, 16);
+    }
+
+    &__item {
+        display: flex;
+        align-items: center;
+        @include responsive(gap, 20, 16);
+        color: var(--white);
+        white-space: nowrap;
+        @include responsive(font-size, 35, 17, );
+        line-height: 120%;
+        letter-spacing: 0.02em;
+        img {
+            @include responsive(width, 37, 17);
+            @include responsive(width, 38, 18);
+        }
+    }
+}

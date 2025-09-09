@@ -1,0 +1,98 @@
+// Заголовки, общие БЄМ блоки и проче...
+body * {
+    line-height: 120%;
+}
+
+
+a, .bs-link {
+    color: var(--black);
+    transition: color 0.3s ease  0s;
+
+    @media(min-width:769px){
+        &:hover {
+            color: var(--green);
+        }
+    }
+}
+
+h2 {
+    font-weight: 700;
+    font-size: 68px;
+    @include responsive(font-size, 68, 20);
+    line-height: 120%;
+    text-align: center;
+}
+
+.bs-text {
+    @include responsive(font-size, 22, 17);
+    line-height: 120%;
+    text-align: center;
+}
+
+
+.button {
+    font-weight: 700;
+    font-size: 24px;
+    @include responsive(font-size, 24, 17);
+    line-height: 120%;
+    text-align: center;
+    color: var(--white);
+    @include responsive(padding, 25, 15);
+    background-color: var(--green);
+    border-radius: 50px;
+    transition: all 0.3s ease  0s;
+
+
+
+    @media(min-width:769px){
+        &:hover  {  
+            color: var(--white);
+            background-color: #00a2ae;
+            transform: scale(1.02);
+        }
+    }
+    &:active {
+        transform: scale(0.98);
+    }
+}
+
+.green {
+    color: var(--green);
+}
+
+.title-quote {
+    display: inline-block;
+    border-radius: 50px;
+    @include responsive(padding-top, 10, 5);
+    @include responsive(padding-bottom, 10, 5);
+    @include responsive(padding-left, 40, 20);
+    @include responsive(padding-right, 40, 20);
+    @include responsive(font-size, 42, 22);
+    margin-left: auto;
+    margin-right: auto;
+    background-color: var(--white);
+}
+
+
+.plus {
+    display: inline-block;
+    @include responsive(width, 55, 40);
+    @include responsive(height, 55, 40);
+    cursor: pointer;
+    transition: all 0.3s ease  0s;
+
+    img {
+        width: 100%;
+        height: auto;
+    }
+
+    @media(min-width:769px){
+        &:hover  {  
+            transform: scale(1.07) rotate(5deg);
+        }
+    }
+
+    &:active {
+        transform: scale(0.98) rotate(0deg);
+    }
+}

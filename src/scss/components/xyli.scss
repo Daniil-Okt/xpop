@@ -1,0 +1,26 @@
+.xyli {
+    position: relative;
+
+    &__img {
+        
+        img {
+            aspect-ratio: 1920 / 1080;
+            width: 100%;
+
+            @media(max-width:768px){
+                aspect-ratio: 390 / 416;
+            }
+        }
+    }
+    &__btn {
+        position: absolute;
+    }
+    &__btn.one {
+        @include responsive(top, 485, 344);
+        @include responsive(left, 180, 55);
+    }
+    &__btn.two {
+        @include responsive(top, 194, 344);
+        @include responsive(right, 745, 55);
+    }
+}

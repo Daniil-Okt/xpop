@@ -1,0 +1,59 @@
+.care {
+    @include responsive(padding-top, 172, 78);
+    @include responsive(padding-bottom, 140, 80);
+    background: var(--blue-2);
+
+    &__container {
+    }
+    &__top {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+
+    &__title-up {
+        @include responsive(margin-bottom, 75, 32);
+
+    }
+
+    &__title {
+        max-width: vw(1250);
+        @include responsive(margin-bottom, 45, 16);
+
+        @media(max-width:768px){
+            max-width: 100%;
+        }
+    }
+
+    &__text {
+        max-width: vw(1064);
+        @include responsive(margin-bottom, 134, 80);
+
+        @media(max-width:768px){
+            max-width: 100%;
+        }
+    }
+
+    &__row {
+        // position: sticky !important;
+        // top: 0 !important;
+        display: flex;
+        @include responsive(gap, 57.25, 32);
+        width: max-content;
+    }
+
+    &__item {
+        height: auto;
+        width: vw(823.83);
+        img {
+            margin-top: auto;
+            width: 100%;
+        }
+    }
+
+    
+}
+.title-quote {
+}
+.bs-text {
+}
