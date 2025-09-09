@@ -1,0 +1,17 @@
+<svg width="426" height="196" viewBox="0 0 426 196" fill="none" xmlns="http://www.w3.org/2000/svg">
+<path d="M404 111C404 91.67 388.33 76 369 76H364V111H404Z" fill="#020203"/>
+<path d="M404 111H364V162H404V111Z" fill="#020203"/>
+<path d="M364 162V194H372.344C380.452 194 387.861 191.034 393.53 186.137C398.504 188.41 420.5 188 425.5 184C423.327 183.38 409 179 406.5 173C404 167 404 162 404 162H364Z" fill="#020203"/>
+<rect width="323" height="118" transform="matrix(-1 0 0 1 364 76)" fill="#020203"/>
+<path d="M1 111C1 91.67 16.67 76 36 76H41V111H1Z" fill="#020203"/>
+<rect x="1" y="111" width="40" height="51" fill="#020203"/>
+<path d="M1 162C1 179.673 15.3269 194 33 194H41V162H1Z" fill="#020203"/>
+<path d="M1 65C1 45.67 16.67 30 36 30H41V65H1Z" fill="white" stroke="white"/>
+<rect x="1" y="65" width="40" height="93" fill="white" stroke="white"/>
+<path d="M1 158C1 175.673 15.3269 190 33 190H41V158H1Z" fill="white" stroke="white"/>
+<rect x="41" y="30" width="323" height="160" fill="white"/>
+<rect x="41" y="30" width="323" height="160" stroke="white"/>
+<path d="M404 65C404 45.67 388.33 30 369 30H364V65H404Z" fill="white" stroke="white"/>
+<path d="M404 65H364V158H404V65Z" fill="white" stroke="white"/>
+<path d="M364 158V190H372.344C380.452 190 387.861 187.034 393.53 182.137C398.504 184.41 414.734 185.928 424 183.013C421.827 182.392 409 175 406.5 169C404 163 404 158 404 158H364Z" fill="white" stroke="white"/>
+</svg>
