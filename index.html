@@ -8,9 +8,9 @@
   <title>XyliPOP</title>
 
   <link rel="shortcut icon" href="favicon.ico" type="image/x-icon">
-  <link rel="stylesheet" href="css/main.min.css?_v=20250909105927">
+  <link rel="stylesheet" href="css/main.min.css?_v=20250910100538">
 
-  <script defer="defer" src="js/main.min.js?_v=20250909105927"></script>
+  <script defer="defer" src="js/main.min.js?_v=20250910100538"></script>
 </head>
 
   <body>
@@ -22,6 +22,9 @@
       <img src="images/logo.svg" alt="">
     </a>
     <nav class="header__menu menu">
+      <div class="icon-menu menu__close">
+        <img src="images/brn-close.svg" alt="">
+      </div>
       <ul class="menu__list">
         <li class="menu__item"><a href="#" class="menu__link">Продукция</a></li>
         <li class="menu__item"><a href="#" class="menu__link">Преимущества</a></li>
@@ -43,7 +46,7 @@
         <path d="M11.083 3.75C13.1361 3.75 14.866 4.45929 16.2881 5.87988C17.71 7.30033 18.4192 9.02934 18.417 11.083C18.417 11.9116 18.2853 12.6903 18.0234 13.4199C17.7598 14.1542 17.4031 14.8002 16.9551 15.3604L16.8154 15.5352L23.5068 22.2266C23.6691 22.3889 23.7538 22.5954 23.7539 22.8662C23.7539 23.1372 23.6693 23.3444 23.5068 23.5068C23.3444 23.6693 23.1372 23.7539 22.8662 23.7539C22.5954 23.7538 22.3889 23.6691 22.2266 23.5068L15.5352 16.8154L15.3604 16.9551C14.8002 17.4031 14.1542 17.7598 13.4199 18.0234C12.6903 18.2853 11.9116 18.417 11.083 18.417C9.02854 18.4169 7.29948 17.7074 5.87988 16.2871C4.46011 14.8666 3.75075 13.1369 3.75 11.083C3.7493 9.02932 4.45869 7.30032 5.87988 5.87988C7.30112 4.45942 9.03011 3.75007 11.083 3.75ZM11.084 5.58301C9.55853 5.58138 8.25487 6.11818 7.18848 7.18848C6.12256 8.25846 5.58545 9.56164 5.58301 11.083C5.58059 12.605 6.11765 13.9087 7.18848 14.9795C8.25911 16.0501 9.56209 16.5851 11.083 16.582C12.6069 16.582 13.9109 16.0473 14.9795 14.9795C16.0482 13.9116 16.5838 12.6077 16.583 11.083C16.5821 9.55864 16.0465 8.25556 14.9795 7.18848C13.9124 6.12143 12.609 5.58472 11.084 5.58301Z" fill="#020203" stroke="white" stroke-width="0.5"/>
       </svg>
     </div>
-    <button class="header__burger icon-menu">
+    <button class="icon-menu header__burger">
   <span></span>
 </button>
   </div>
@@ -145,8 +148,8 @@
         <div class="care">
     <div class="care__container">
         <div class="care__top">
-            <div class="care__title-up title-quote">О нас</div>
-            <h2 class="care__title">
+            <div class="title-quote care__title-up">О нас</div>
+            <h2 class="bs-title care__title">
                 Заботьтесь о зубах с удовольствием 
                 вместе с Ксили Поп!
             </h2>
@@ -154,10 +157,9 @@
                 Miradent — немецкий эксперт в уходе за полостью рта, представляет — инновационные леденцы с ксилитом, которые дарят детям и взрослым вкусное удовольствие и надёжную защиту от кариеса!
             </p>
         </div>
+    </div>
+    <div class="care__container care__content">
         <div class="care__row">
-            <div class="care__item">
-                <picture><source srcset="images/care/care-item1.webp" type="image/webp"><img src="images/care/care-item1.png" alt=""></picture>
-            </div>
             <div class="care__item">
                 <picture><source srcset="images/care/care-item2.webp" type="image/webp"><img src="images/care/care-item2.png" alt=""></picture>
             </div>
@@ -166,6 +168,12 @@
             </div>
             <div class="care__item">
                 <picture><source srcset="images/care/care-item4.webp" type="image/webp"><img src="images/care/care-item4.png" alt=""></picture>
+            </div>
+            <div class="care__item">
+                <picture><source srcset="images/care/care-item5.webp" type="image/webp"><img src="images/care/care-item5.png" alt=""></picture>
+            </div>
+            <div class="care__item">
+                <picture><source srcset="images/care/care-item1.webp" type="image/webp"><img src="images/care/care-item1.png" alt=""></picture>
             </div>
         </div>
     </div>
@@ -178,13 +186,415 @@
         </picture>
     </div>
 
-    <div class="one plus xyli__btn">
+    <div class="plus xyli__btn one">
         <img src="images/puls-pink.svg" alt="">
     </div>
     <div class="plus xyli__btn two">
         <img src="images/puls-pink.svg" alt="">
     </div>
 </div>
+        <div class="victory">
+    <div class="victory__fon">
+        <picture>
+            <source media="(max-width: 768px)" srcset="images/victory/victory-fon-mob.svg">
+            <img loading="lazy" src="images/victory/victory-fon.svg" alt="">
+        </picture>
+    </div>
+    
+     
+        <div class="victory__tooth">
+            <img src="images/victory/victory__tooth.svg" alt="">
+        </div>
+
+
+        <div class="victory__xily">
+            <img src="images/victory/victory-xily.svg" alt="">
+        </div>
+        
+        <div class="victory__bacterium _1">
+            <img src="images/victory/bacterium1.svg" alt="">
+        </div>
+        <div class="victory__bacterium _2">
+            <img src="images/victory/bacterium2.svg" alt="">
+        </div>
+        <div class="victory__bacterium _3">
+            <img src="images/victory/bacterium3.svg" alt="">
+        </div>
+        <div class="victory__bacterium _4">
+            <img src="images/victory/bacterium4.svg" alt="">
+        </div>
+        
+
+        <div class="plus victory__btn _1">
+            <img src="images/puls-pink.svg" alt="">
+        </div>
+        <div class="plus victory__btn _2">
+            <img src="images/puls-pink.svg" alt="">
+        </div>
+        <div class="plus victory__btn _3">
+            <img src="images/puls-pink.svg" alt="">
+        </div>
+    
+</div>
+        <div class="advant">
+    <div class="advant__container">
+        <h2 class="title-quote blue advant__title-up">Преимущества XyliPop</h2>
+        <div class="advant__row">
+            <div class="advant__item pink">
+                <span>
+                    <b>100 %</b>
+                    <br>защита
+                </span>
+            </div>
+            <div class="advant__item blue">
+                <span>
+                    <b>5,6</b>
+                    <br>рН
+                </span>
+            </div>
+            <div class="advant__item img-one">
+                <picture><source srcset="images/advant/advant-img1.webp" type="image/webp"><img class="cover" src="images/advant/advant-img1.png" alt=""></picture>
+            </div>
+            <div class="advant__item violet">
+                <span>
+                    <b>0г </b>
+                    <br>сахара
+                </span>
+            </div>
+            <div class="advant__item blue-dark">
+                <span>
+                    <b>6г</b>
+                    <br>вес
+                </span>
+            </div>
+            <div class="advant__item img-two">
+                <picture><source srcset="images/advant/advant-img2.webp" type="image/webp"><img class="cover" src="images/advant/advant-img2.png" alt=""></picture>
+            </div>
+            <div class="green advant__item">
+                <span>
+                    <b>12,5</b> ккал
+                    <br>на леденец
+                </span>
+            </div>
+        </div>
+    </div>
+</div>
+        <div class="choice">
+    <div class="choice__container">
+        <h2 class="bs-title choice__title">
+            <span class="green">Xylipop</span> - выбор стоматологов
+            более чем
+            <br><span class="bot-text"><span>в </span> <span class="green"><b>70 </b></span>  <span class="green">странах</span></span>
+        </h2>
+    </div>
+    <div class="choice__content">
+        <div class="choice__card">
+            <div class="choice__card-img">
+                <picture>
+                    <source media="(max-width: 768px)" srcset="images/choice/choice-img-mob.png">
+                    <img loading="lazy" src="images/choice/choice-img.png" alt="">
+                </picture>
+            </div>
+
+            <div class="choice__card-candy _1">
+                <picture><source srcset="images/choice/candy.webp" type="image/webp"><img src="images/choice/candy.png" alt=""></picture>
+            </div>
+            <div class="choice__card-candy _2">
+                <picture><source srcset="images/choice/candy.webp" type="image/webp"><img src="images/choice/candy.png" alt=""></picture>
+            </div>
+            <div class="choice__card-candy _3">
+                <picture><source srcset="images/choice/candy.webp" type="image/webp"><img src="images/choice/candy.png" alt=""></picture>
+            </div>
+            <div class="choice__card-candy _4">
+                <picture><source srcset="images/choice/candy.webp" type="image/webp"><img src="images/choice/candy.png" alt=""></picture>
+            </div>
+            <div class="choice__card-candy _5">
+                <picture><source srcset="images/choice/candy.webp" type="image/webp"><img src="images/choice/candy.png" alt=""></picture>
+            </div>
+            <div class="choice__card-candy _6">
+                <picture><source srcset="images/choice/candy.webp" type="image/webp"><img src="images/choice/candy.png" alt=""></picture>
+            </div>
+            <div class="choice__card-candy _7">
+                <picture><source srcset="images/choice/candy.webp" type="image/webp"><img src="images/choice/candy.png" alt=""></picture>
+            </div>
+            <div class="choice__card-candy _8">
+                <picture><source srcset="images/choice/candy.webp" type="image/webp"><img src="images/choice/candy.png" alt=""></picture>
+            </div>
+            <div class="choice__card-candy _9">
+                <picture><source srcset="images/choice/candy.webp" type="image/webp"><img src="images/choice/candy.png" alt=""></picture>
+            </div>
+        </div>  
+    </div>
+</div>
+        
+        
+        <div class="signif">
+    <div class="signif__container">
+        <div class="signif__top">
+            <div class="title-quote blue signif__title-up">О важном</div>
+
+            <h2 class="bs-title signif__title">
+                Мы в <span class="green">miradent®</span> убеждены, забота о здоровье полости рта – больше, чем красота. это важная составляющая общего благополучия.
+            </h2>
+            <p class="bs-text signif__text">
+                В этом разделе делимся с вами экспертными знаниями, проверенными советами и полезными рекомендациями. Сохраним здоровье вашей улыбки вместе :)
+            </p>
+        </div>
+
+        <div class="signif__video">
+            <video class="cover lazy" autoplay muted loop playsinline poster="images/signif/signif-video.png" loading="lazy">
+                <source data-src="static/signif/signif-video.mp4" type="video/mp4">
+            </video>
+        </div>
+
+    </div>
+</div>
+        <div class="quest">
+    <div class="quest__container">
+        <h2 class="title-quote blue quest__title-up">Факты о ксилите</h2>
+
+        <div class="quest__row">
+            <div class="quest__item">
+                <h3 class="quest__title">
+                    Что такое ксилит?
+                </h3>
+                <div class="plus quest__plus">
+                    <img src="images/puls-pink.svg" alt="">
+                </div>
+            </div>
+            <div class="quest__item">
+                <h3 class="quest__title">
+                    ТОП-5 заменителей сахара: чем они отличаются
+                </h3>
+                <div class="plus quest__plus">
+                    <img src="images/puls-pink.svg" alt="">
+                </div>
+            </div>
+            <div class="quest__item">
+                <h3 class="quest__title">
+                    Как он работает?
+                </h3>
+                <div class="plus quest__plus">
+                    <img src="images/puls-pink.svg" alt="">
+                </div>
+            </div>
+            <div class="quest__item">
+                <h3 class="quest__title">
+                    Леденцы без сахара: вред или польза?
+                </h3>
+                <div class="plus quest__plus">
+                    <img src="images/puls-pink.svg" alt="">
+                </div>
+            </div>
+            <div class="quest__item">
+                <h3 class="quest__title">
+                    Почему ксилит защищает от кариеса?
+                </h3>
+                <div class="plus quest__plus">
+                    <img src="images/puls-pink.svg" alt="">
+                </div>
+            </div>
+            <div class="quest__item">
+                <h3 class="quest__title">
+                    Как снизить сахарозависимость у детей?
+                </h3>
+                <div class="plus quest__plus">
+                    <img src="images/puls-pink.svg" alt="">
+                </div>
+            </div>
+            <div class="quest__item">
+                <h3 class="quest__title">
+                    Чем ксилит лучше сахара, фруктозы и сорбита?
+                </h3>
+                <div class="plus quest__plus">
+                    <img src="images/puls-pink.svg" alt="">
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+        <div class="reviews">
+    <div class="reviews__content">
+        <div class="reviews__fon">
+            <picture>
+                <source media="(max-width: 768px)" srcset="images/reviews/reviews-fon-mob.png">
+                <img loading="lazy" src="images/reviews/reviews-fon.png" alt="">
+            </picture>
+        </div>
+        <div class="reviews__container">
+            <div class="reviews__top">
+                <h2 class="title-quote reviews__title-up">Отзывы наших покупателей</h2>
+            </div>
+    
+    
+            <div class="reviews__slider">
+                <div class="reviews__wrapper swiper-wrapper">
+                    <div class="reviews__slide slide-rew swiper-slide">
+                        <div class="slide-rew__body">
+                            <div class="slide-rew__top">
+                                <div class="slide-rew__img">
+                                    <picture><source srcset="images/reviews/slide-rew-img1.webp" type="image/webp"><img class="cover" src="images/reviews/slide-rew-img1.png" alt=""></picture>
+                                </div>
+                                <div class="slide-rew__str">
+                                    <img src="images/reviews/slide-rew-str.svg" alt="">
+                                </div>
+                            </div>
+                            <div class="slide-rew__bot">
+                                <div class="slide-rew__title">
+                                    Елена
+                                </div>
+                                <p class="slide-rew__text">
+                                    Достоинства: Отличные леденцы, приятный аромат, идеальный размер шарика, ребенку очень понравилось. А самое важное, прекрасная прлезная альтернатива «чупику».
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="reviews__slide slide-rew swiper-slide">
+                        <div class="slide-rew__body">
+                            <div class="slide-rew__top">
+                                <div class="slide-rew__img">
+                                    <picture><source srcset="images/reviews/slide-rew-img2.webp" type="image/webp"><img class="cover" src="images/reviews/slide-rew-img2.png" alt=""></picture>
+                                </div>
+                                <div class="slide-rew__str">
+                                    <img src="images/reviews/slide-rew-str.svg" alt="">
+                                </div>
+                            </div>
+                            <div class="slide-rew__bot">
+                                <div class="slide-rew__title">
+                                    Екатерина 
+                                </div>
+                                <p class="slide-rew__text">
+                                    Достоинства: Купила для угощения детей в детском саду на день рождения, уже попробовали, детям очень нравятся) Комментарий: Были хорошо упакованы в коробочку, все леденцы пришли целые
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="reviews__slide slide-rew swiper-slide">
+                        <div class="slide-rew__body">
+                            <div class="slide-rew__top">
+                                <div class="slide-rew__img">
+                                    <picture><source srcset="images/reviews/slide-rew-img1.webp" type="image/webp"><img class="cover" src="images/reviews/slide-rew-img1.png" alt=""></picture>
+                                </div>
+                                <div class="slide-rew__str">
+                                    <img src="images/reviews/slide-rew-str.svg" alt="">
+                                </div>
+                            </div>
+                            <div class="slide-rew__bot">
+                                <div class="slide-rew__title">
+                                    Елена
+                                </div>
+                                <p class="slide-rew__text">
+                                    Достоинства: Отличные леденцы, приятный аромат, идеальный размер шарика, ребенку очень понравилось. А самое важное, прекрасная прлезная альтернатива «чупику».
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="reviews__slide slide-rew swiper-slide">
+                        <div class="slide-rew__body">
+                            <div class="slide-rew__top">
+                                <div class="slide-rew__img">
+                                    <picture><source srcset="images/reviews/slide-rew-img2.webp" type="image/webp"><img class="cover" src="images/reviews/slide-rew-img2.png" alt=""></picture>
+                                </div>
+                                <div class="slide-rew__str">
+                                    <img src="images/reviews/slide-rew-str.svg" alt="">
+                                </div>
+                            </div>
+                            <div class="slide-rew__bot">
+                                <div class="slide-rew__title">
+                                    Екатерина 
+                                </div>
+                                <p class="slide-rew__text">
+                                    Достоинства: Купила для угощения детей в детском саду на день рождения, уже попробовали, детям очень нравятся) Комментарий: Были хорошо упакованы в коробочку, все леденцы пришли целые
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+    
+            <div class="btn-str-row reviews__btn-row">
+                <div class="btn-str reviews__btn-prev">
+                    <img src="images/btn-str.svg" alt="">
+                </div>
+                <div class="btn-str _right reviews__btn-next">
+                    <img src="images/btn-str.svg" alt="">
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="reviews__video">
+        <video class="cover lazy" autoplay muted loop playsinline poster="images/reviews/reviews-img.png" loading="lazy">
+            <source data-src="static/reviews/reviews-video.mp4" type="video/mp4">
+        </video>
+    </div>
+
+</div>
+        <div class="answer">
+    <div class="answer__container">
+        <div class="reviews__top">
+            <h2 class="title-quote blue answer__title-up">Вопросы и ответы</h2>
+        </div>
+
+        <div class="answer__row">
+            <div class="answer__item min-width">
+                <div class="answer__item-body">
+                    <div class="answer__quote">
+                        родители
+                    </div>
+                    <div class="slide-rew__title answer__title">
+                        Действительно ли работают леденцы с ксилитом?
+                    </div>
+                    <p class="slide-rew__text answer__text">
+                        Долго искала замену конфетам, ребёнок у меня тот ещё сладкоежка. Леденцы с ксилитом стали спасением: никакого сахара и химии, а вкус просто супер! Ребёнок в восторге! Также хочется отметить удобные порционные пакетики всегда можно взять с собой.
+                    </p>
+                </div>
+            </div>
+            <div class="answer__item">
+                <div class="answer__item-body">
+                    <div class="answer__item-fon-one">
+                        <picture>
+                            <source media="(max-width: 768px)" srcset="images/answer/answer-fon1-mob.svg">
+                            <img loading="lazy" src="images/answer/answer-fon1.svg" alt="">
+                        </picture>
+                    </div>
+                    <div class="answer__quote">
+                        стоматоллоги
+                    </div>
+                    <div class="slide-rew__title answer__title">
+                        Можно ли заменить конфеты леденцами Xylipop?
+                    </div>
+                    <p class="slide-rew__text answer__text">
+                        Рекомендую давать ребёнку по 2–3 леденца без сахара и аспартама после еды или перед сном. Для точной дозировки и заказа обращайтесь в чат-бот — там дадут всю информацию и проконсультируют по любым вопросам.
+                    </p>
+                </div>
+            </div>
+            <div class="answer__item">
+                <div class="answer__item-body">
+                    <div class="answer__item-fon-two">
+                        <img loading="lazy" src="images/answer/answer-fon2.svg" alt="">
+                    </div>
+                    <div class="answer__quote">
+                        стоматоллоги
+                    </div>
+                    <div class="slide-rew__title answer__title">
+                        Как предотвратить кариес у ребёнка?
+                    </div>
+                    <p class="slide-rew__text answer__text">
+                        Как врач-стоматолог с 12-летним опытом, могу подтвердить: леденцы на ксилите действительно безопасны и эффективны для профилактики кариеса у детей. Отсутствие сахара и аспартама снижает риск разрушения эмали, а ксилит подавляет рост Streptococcus mutans, нормализует pH полости рта и стимулирует выработку слюны.
+                    </p>
+                </div>
+
+            </div>
+            <div class="answer__item min-width">
+                <div class="answer__item-img">
+                    <picture><source srcset="images/answer/answer-img.webp" type="image/webp"><img class="cover" src="images/answer/answer-img.png" alt=""></picture>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+        
+        
         
       </main>
 
