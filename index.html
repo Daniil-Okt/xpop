@@ -8,9 +8,9 @@
   <title>XyliPOP</title>
 
   <link rel="shortcut icon" href="favicon.ico" type="image/x-icon">
-  <link rel="stylesheet" href="css/main.min.css?_v=20250910112536">
+  <link rel="stylesheet" href="css/main.min.css?_v=20250910233107">
 
-  <script defer="defer" src="js/main.min.js?_v=20250910112536"></script>
+  <script defer="defer" src="js/main.min.js?_v=20250910233107"></script>
 </head>
 
   <body>
@@ -49,6 +49,7 @@
 
       <main class="page">
         <div data-observ></div>
+        
         <div class="about">
     <div class="about__video">
         <video class="cover lazy" autoplay muted playsinline poster="images/about/about-fon.png" loading="lazy">
@@ -91,7 +92,7 @@
                 <div class="green acqua__item-title one">
                     Ксили
                 </div>
-                <div class="acqua__dialog one">
+                <div class="one acqua__dialog">
                     <div class="acqua__dialog-fon">
                         <picture>
                             <source media="(max-width: 768px)" srcset="images/acqua/dialog-fon1-mob.png">
@@ -102,7 +103,7 @@
                         </div>
                     </div>
                 </div>
-                <div class="acqua__dialog two">
+                <div class="two acqua__dialog">
                     <div class="acqua__dialog-fon">
                         <picture>
                             <source media="(max-width: 768px)" srcset="images/acqua/dialog-fon2-mob.png">
@@ -181,10 +182,10 @@
         </picture>
     </div>
 
-    <div class="plus xyli__btn one">
+    <div class="plus xyli__btn one" data-type="popup-tara-1">
         <img src="images/puls-pink.svg" alt="">
     </div>
-    <div class="plus xyli__btn two">
+    <div class="plus xyli__btn two" data-type="popup-tara-2">
         <img src="images/puls-pink.svg" alt="">
     </div>
 </div>
@@ -241,7 +242,7 @@
                     <br>защита
                 </span>
             </div>
-            <div class="advant__item blue">
+            <div class="blue advant__item">
                 <span>
                     <b>5,6</b>
                     <br>рН
@@ -321,8 +322,145 @@
         </div>  
     </div>
 </div>
-        
-        
+        <div class="useful">
+    <div class="useful__fon-top">
+        <picture>
+            <source media="(max-width: 768px)" srcset="images/guard/quar-fon-top-mob.png">
+            <img loading="lazy" src="images/guard/quar-fon-top.png" alt="">
+        </picture>
+    </div>
+    <div class="useful__fon-bot">
+        <picture>
+            <source media="(max-width: 768px)" srcset="images/guard/quar-fon-bot-mob.png">
+            <img loading="lazy" src="images/guard/quar-fon-bot.png" alt="">
+        </picture>
+    </div>
+    <div class="useful__trigger">
+        <div class="useful__content">
+            <div class="guard">
+                <div class="guard__container">
+                    <div class="signif__top where__top guard__top">
+                        <h2 class="title-quote guard__title-up">Чем еще полезен Ксили Поп</h2>
+                    </div>
+                    <div class="guard__row">
+                        <div class="one guard__item">
+                            <div class="guard__advant _bot">
+                                <div class="guard__advant-icon">
+                                    <img src="images/guard/advant-icon1.svg" alt="">
+                                </div>
+                                <span>Без сахара  и фруктозы</span>
+                            </div>
+                            <div class="guard__text">
+                                Защита
+                            </div>
+                        </div>
+                        <div class="guard__img">
+                            <div class="guard__img-icon">
+                                <img src="images/guard/guard-img-icon.svg" alt="">
+                            </div>
+                            <picture><source srcset="images/guard/guard-img.webp" type="image/webp"><img src="images/guard/guard-img.png" alt=""></picture>
+                        </div>
+                        <div class="two guard__item">
+                            <div class="guard__text">
+                                зубов
+                            </div>
+                            <div class="guard__advant _top">
+                                <div class="guard__advant-icon">
+                                    <img src="images/guard/advant-icon2.svg" alt="">
+                                </div>
+                                <span>Подслащен ксилитом</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+    
+            <div class="struct">
+                <div class="struct__container">
+                    <div class="struct__row">
+                        <div class="struct__img-row">
+                            <div class="struct__img">
+                                <picture><source srcset="images/guard/struct-img1.webp" type="image/webp"><img class="cover" src="images/guard/struct-img1.png" alt=""></picture>
+                            </div>
+                            <div class="two struct__img">
+                                <picture><source srcset="images/guard/struct-img2.webp" type="image/webp"><img class="cover" src="images/guard/struct-img2.png" alt=""></picture>
+                            </div>
+                        </div>
+    
+                        <ul class="struct__list">
+                            <li class="struct__item">
+                                <div class="struct__item-icon">
+                                    <img src="images/guard/struct-item-icon.svg" alt="">
+                                </div>
+                                <div class="struct__item-body">
+                                    <div class="struct__item-title">
+                                        Натуральный состав
+                                    </div>
+                                    <div class="struct__item-text">
+                                        Без аспартама и сорбитола и т.д. — только натуральные компоненты
+                                    </div>
+                                </div>
+                            </li>
+                            <li class="struct__item">
+                                <div class="struct__item-icon">
+                                    <img src="images/guard/struct-item-icon.svg" alt="">
+                                </div>
+                                <div class="struct__item-body">
+                                    <div class="struct__item-title">
+                                        Защита эмали
+                                    </div>
+                                    <div class="struct__item-text">
+                                        До –60% налёта при регулярном потреблении
+                                    </div>
+                                </div>
+                            </li>
+                            <li class="struct__item">
+                                <div class="struct__item-icon">
+                                    <img src="images/guard/struct-item-icon.svg" alt="">
+                                </div>
+                                <div class="struct__item-body">
+                                    <div class="struct__item-title">
+                                        Без сахара
+                                    </div>
+                                    <div class="struct__item-text">
+                                        Подходит при соблюдении диеты и диабетикам
+                                    </div>
+                                </div>
+                            </li>
+                            <li class="struct__item">
+                                <div class="struct__item-icon">
+                                    <img src="images/guard/struct-item-icon.svg" alt="">
+                                </div>
+                                <div class="struct__item-body">
+                                    <div class="struct__item-title">
+                                        Профилактика кариеса
+                                    </div>
+                                    <div class="struct__item-text">
+                                        До 75% снижения риска кариеса
+                                    </div>
+                                </div>
+                            </li>
+                            <li class="struct__item">
+                                <div class="struct__item-icon">
+                                    <img src="images/guard/struct-item-icon.svg" alt="">
+                                </div>
+                                <div class="struct__item-body">
+                                    <div class="struct__item-title">
+                                        Удобная форма
+                                    </div>
+                                    <div class="struct__item-text">
+                                        6 г вес — легко есть детям
+                                    </div>
+                                </div>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+</div>
         <div class="signif">
     <div class="signif__container">
         <div class="signif__top">
@@ -641,7 +779,36 @@
         </div>
     </div>
 </div>
-        
+        <div class="bot">
+    <div class="bot__container">
+        <div class="signif__top where__top">
+            <h2 class="bs-title bot__title">
+                Есть вопрос?
+                <br>Спроси у нашего чат бота
+            </h2>
+            <div class="bot__content">
+                <div class="bot-chat bot__chat your-scroll-container">
+                    <div class="bot-chat__item">
+                        Добрый день! 
+                    </div>
+                    <div class="blue bot-chat__item">
+                        Готовы преобразить вашу улыбку вместе с XyliPoP?
+                    </div>
+                </div>
+                <form action="#" class="bot__item-input">
+                    <input type="text" name="bot-chat" placeholder="Введите сообщение" class="_req input-text bot__input">
+
+                    <button type="submit" class="bot__button">
+                        <svg width="60" height="60" viewBox="0 0 60 60" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <circle cx="30" cy="30" r="30" transform="rotate(-90 30 30)" fill="#F7A4BC"/>
+                            <path d="M30.4819 14.2885C30.0886 13.9009 29.4554 13.9055 29.0678 14.2989L22.7506 20.7094C22.363 21.1027 22.3676 21.7359 22.761 22.1235C23.1544 22.5112 23.7875 22.5065 24.1752 22.1132L29.7904 16.415L35.4886 22.0302C35.882 22.4179 36.5151 22.4132 36.9028 22.0198C37.2904 21.6265 37.2858 20.9933 36.8924 20.6057L30.4819 14.2885ZM30 45L31 44.9927L30.78 14.9935L29.78 15.0008L28.7801 15.0081L29 45.0073L30 45Z" fill="#020203"/>
+                        </svg>
+                    </button>
+                </form>
+            </div>
+        </div>
+    </div>
+</div>
         <div class="where">
     <div class="where__container">
         <div class="signif__top where__top">
@@ -716,7 +883,61 @@
 
       <footer class="footer">
   <div class="footer__container">
-    
+
+    <div class="footer__xyli">
+      <img src="images/foot-xyli.svg" alt="">
+    </div>
+    <div class="footer__top">
+      <div class="footer__logo">
+        <img src="images/logo-foot.svg" alt="">
+      </div>
+
+      <nav class="footer__menu">
+        <a href="#" class="bs-link footer__menu-item">
+          Gродукция
+        </a>
+        <a href="#" class="bs-link footer__menu-item">
+          Преимущества
+        </a>
+        <a href="#" class="bs-link footer__menu-item">
+          Вопросы и ответы
+        </a>
+        <a href="#" class="bs-link footer__menu-item">
+          Партнерам
+        </a>
+      </nav>
+    </div>
+
+    <div class="footer__form">
+      <div class="footer__form-title">
+        Подписаться на рассылку
+      </div>
+      <p class="footer__form-text">
+        Подписываясь, вы соглашаетесь получать
+        информационную рассылку от XyliPOP®
+      </p>
+      <form action="#" class="bot__item-input">
+        <input type="text" name="bot-chat" placeholder="Введите сообщение" class="_req input-text bot__input">
+
+        <button type="submit" class="bot__button">
+            <svg width="60" height="60" viewBox="0 0 60 60" fill="none" xmlns="http://www.w3.org/2000/svg">
+              <path d="M30 60C13.4315 60 0 46.5685 0 30C0 13.4315 13.4315 0 30 0C46.5685 0 60 13.4315 60 30C60 46.5685 46.5685 60 30 60Z" fill="#F7A4BC"/>
+              <path d="M40.7071 30.7071C41.0976 30.3166 41.0976 29.6834 40.7071 29.2929L34.3431 22.9289C33.9526 22.5384 33.3195 22.5384 32.9289 22.9289C32.5384 23.3195 32.5384 23.9526 32.9289 24.3431L38.5858 30L32.9289 35.6569C32.5384 36.0474 32.5384 36.6805 32.9289 37.0711C33.3195 37.4616 33.9526 37.4616 34.3431 37.0711L40.7071 30.7071ZM20 30V31H40V30V29H20V30Z" fill="#020203"/>
+            </svg>
+        </button>
+      </form>
+    </div>
+
+    <div class="footer__tooth">
+      <img src="images/foot-tooth.svg" alt="">
+    </div>
+    <div class="footer__bot">
+      <p>Производитель:<br>Hager & Werken GmbH & Co. KG<br>Ackerstraße, 1, 47269, Duisburg, Германия<br>Teл.: +49 (203) 992-690, факс: +49 (203) 299-283<br>www.hagerwerken.de, www.miradent.de</p>
+      <div class="footer__row">
+        <p>Представительство в России и СНГ:<br>ООО «ХАГЕР ЕВРАЗИЯ»<br>115088, г. Москва, ул. 2-я Машиностроения, д. 27, стр. 6<br>Тел.: +7 (495) 255-09-02, info@miradent-russia.ru<br>www.miradent-russia.ru, www.xylit.ru</p>
+        <p>© Все права защищены © 2021-2025 г. XyliPOP® – зарегистрированный торговый знак.</p>
+      </div>
+    </div>
   </div>
 </footer>
     </div>
@@ -731,6 +952,101 @@
         </div>
     </div>
 </div>
+
+
+
+<div class="popup popup-tara" data-popup="popup-tara-1" data-close-overlay>
+    <div class="popup__wrapper" data-close-overlay>
+        <div class="popup__content popup-tara__content">
+            <button class="button-close popup__close" type="button">
+                <img src="images/brn-close.svg" alt="">
+            </button>
+                <div class="bs-title popup-tara__title">
+                    Транспортная тара
+                </div>  
+                <div class="popup-tara__row">
+                    <div class="popup-tara__plan">
+                        <picture><source srcset="images/popup-tara/popup-tara-plan.webp" type="image/webp"><img class="cover" src="images/popup-tara/popup-tara-plan.png" alt=""></picture>
+                    </div>
+                    <div class="popup-tara__body">
+                        <div class="bs-title popup-tara__name">
+                            XyliPOP® / КсилиПоп
+                            леденец на палочке
+                        </div> 
+
+                        <p class="popup-tara__quantity">
+                            50 шт.
+                        </p>
+
+                        <div class="popup-tara__text">
+                            <p class="bs-text">
+                                Габариты коробки:
+                                <br>42 × 29 × 19 см
+                            </p>
+                            <p class="bs-text">
+                                Вложений в коробе:
+                                <br>4 упаковки по 50 шт. — всего
+                                200 леденцов
+                            </p>
+                        </div>
+                    </div>
+                </div>
+                <div class="popup-tara__img-one">
+                    <picture><source srcset="images/popup-tara/popup-tara-img11.webp" type="image/webp"><img class="cover" src="images/popup-tara/popup-tara-img11.png" alt=""></picture>
+                </div>
+                <div class="popup-tara__img-two">
+                    <picture><source srcset="images/popup-tara/popup-tara-img12.webp" type="image/webp"><img class="cover" src="images/popup-tara/popup-tara-img12.png" alt=""></picture>
+                </div>
+        </div>
+    </div>
+</div>
+
+<div class="popup popup-tara" data-popup="popup-tara-2" data-close-overlay>
+    <div class="popup__wrapper" data-close-overlay>
+        <div class="popup__content popup-tara__content">
+            <button class="button-close popup__close" type="button">
+                <img src="images/brn-close.svg" alt="">
+            </button>
+                <div class="bs-title popup-tara__title">
+                    Транспортная тара
+                </div>  
+                <div class="popup-tara__row">
+                    <div class="popup-tara__plan">
+                        <picture><source srcset="images/popup-tara/popup-tara-plan.webp" type="image/webp"><img class="cover" src="images/popup-tara/popup-tara-plan.png" alt=""></picture>
+                    </div>
+                    <div class="popup-tara__body">
+                        <div class="bs-title popup-tara__name">
+                            XyliPOP® / КсилиПоп
+                            леденец на палочке,
+                            дойпак
+                        </div> 
+
+                        <p class="popup-tara__quantity">
+                            6 шт., клубника / манго
+                        </p>
+
+                        <div class="popup-tara__text">
+                            <p class="bs-text">
+                                Габариты коробки:
+                                <br>40 × 33 × 20 см
+                            </p>
+                            <p class="bs-text">
+                                Вложений в коробе:
+                                <br>40 упаковок по 6 шт.
+                            </p>
+                        </div>
+                    </div>
+                </div>
+                <div class="popup-tara__img-one">
+                    <picture><source srcset="images/popup-tara/popup-tara-img21.webp" type="image/webp"><img class="cover" src="images/popup-tara/popup-tara-img21.png" alt=""></picture>
+                </div>
+                <div class="popup-tara__img-two">
+                    <picture><source srcset="images/popup-tara/popup-tara-img22.webp" type="image/webp"><img class="cover" src="images/popup-tara/popup-tara-img22.png" alt=""></picture>
+                </div>
+        </div>
+    </div>
+</div>
+
 
   </body>
 </html>
