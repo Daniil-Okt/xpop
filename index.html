@@ -8,9 +8,9 @@
   <title>XyliPOP</title>
 
   <link rel="shortcut icon" href="favicon.ico" type="image/x-icon">
-  <link rel="stylesheet" href="css/main.min.css?_v=20250910233107">
+  <link rel="stylesheet" href="css/main.min.css?_v=20250913181600">
 
-  <script defer="defer" src="js/main.min.js?_v=20250910233107"></script>
+  <script defer="defer" src="js/main.min.js?_v=20250913181600"></script>
 </head>
 
   <body>
@@ -49,7 +49,6 @@
 
       <main class="page">
         <div data-observ></div>
-        
         <div class="about">
     <div class="about__video">
         <video class="cover lazy" autoplay muted playsinline poster="images/about/about-fon.png" loading="lazy">
@@ -58,10 +57,10 @@
     </div>
     
     <div class="about__container">
-        <h2 class="about__title">
+        <h1 class="about__title">
             XyliPOP — первый леденец,
             который рекомендуют стоматологи!
-        </h2>
+        </h1>
         <p class="about__text">
             Вкусный уход за полостью рта
         </p>
@@ -206,14 +205,14 @@
         <div class="victory__xily">
             <img src="images/victory/victory-xily.svg" alt="">
         </div>
-        
-        <div class="victory__bacterium _1">
+
+        <div class="_1 victory__bacterium">
             <img src="images/victory/bacterium1.svg" alt="">
         </div>
-        <div class="victory__bacterium _2">
+        <div class="_2 victory__bacterium">
             <img src="images/victory/bacterium2.svg" alt="">
         </div>
-        <div class="victory__bacterium _3">
+        <div class="_3 victory__bacterium">
             <img src="images/victory/bacterium3.svg" alt="">
         </div>
         <div class="victory__bacterium _4">
@@ -221,13 +220,13 @@
         </div>
         
 
-        <div class="plus victory__btn _1">
+        <div class="plus victory__btn _1" data-type="popup-vict-1">
             <img src="images/puls-pink.svg" alt="">
         </div>
-        <div class="plus victory__btn _2">
+        <div class="plus victory__btn _2" data-type="popup-vict-2">
             <img src="images/puls-pink.svg" alt="">
         </div>
-        <div class="plus victory__btn _3">
+        <div class="plus victory__btn _3" data-type="popup-vict-3">
             <img src="images/puls-pink.svg" alt="">
         </div>
     
@@ -345,12 +344,14 @@
                     <div class="guard__row">
                         <div class="one guard__item">
                             <div class="guard__advant _bot">
-                                <div class="guard__advant-icon">
-                                    <img src="images/guard/advant-icon1.svg" alt="">
+                                <div class="one guard__advant-row">
+                                    <div class="guard__advant-icon">
+                                        <img src="images/guard/advant-icon1.svg" alt="">
+                                    </div>
+                                    <span>Без сахара  и фруктозы</span>
                                 </div>
-                                <span>Без сахара  и фруктозы</span>
                             </div>
-                            <div class="guard__text">
+                            <div class="one guard__text">
                                 Защита
                             </div>
                         </div>
@@ -361,14 +362,16 @@
                             <picture><source srcset="images/guard/guard-img.webp" type="image/webp"><img src="images/guard/guard-img.png" alt=""></picture>
                         </div>
                         <div class="two guard__item">
-                            <div class="guard__text">
+                            <div class="two guard__text">
                                 зубов
                             </div>
-                            <div class="guard__advant _top">
-                                <div class="guard__advant-icon">
-                                    <img src="images/guard/advant-icon2.svg" alt="">
+                            <div class="two _top guard__advant">
+                                <div class="two guard__advant-row">
+                                    <div class="guard__advant-icon">
+                                        <img src="images/guard/advant-icon2.svg" alt="">
+                                    </div>
+                                    <span>Подслащен ксилитом</span>
                                 </div>
-                                <span>Подслащен ксилитом</span>
                             </div>
                         </div>
                     </div>
@@ -379,7 +382,7 @@
                 <div class="struct__container">
                     <div class="struct__row">
                         <div class="struct__img-row">
-                            <div class="struct__img">
+                            <div class="one struct__img">
                                 <picture><source srcset="images/guard/struct-img1.webp" type="image/webp"><img class="cover" src="images/guard/struct-img1.png" alt=""></picture>
                             </div>
                             <div class="two struct__img">
@@ -487,7 +490,7 @@
         <h2 class="title-quote blue quest__title-up">Факты о ксилите</h2>
 
         <div class="quest__row">
-            <div class="quest__item">
+            <div class="quest__item" data-type="popup-quest-1">
                 <h3 class="quest__title">
                     Что такое ксилит?
                 </h3>
@@ -495,7 +498,7 @@
                     <img src="images/puls-pink.svg" alt="">
                 </div>
             </div>
-            <div class="quest__item">
+            <div class="quest__item" data-type="popup-quest-1">
                 <h3 class="quest__title">
                     ТОП-5 заменителей сахара: чем они отличаются
                 </h3>
@@ -503,7 +506,7 @@
                     <img src="images/puls-pink.svg" alt="">
                 </div>
             </div>
-            <div class="quest__item">
+            <div class="quest__item" data-type="popup-quest-1">
                 <h3 class="quest__title">
                     Как он работает?
                 </h3>
@@ -511,7 +514,7 @@
                     <img src="images/puls-pink.svg" alt="">
                 </div>
             </div>
-            <div class="quest__item">
+            <div class="quest__item" data-type="popup-quest-4">
                 <h3 class="quest__title">
                     Леденцы без сахара: вред или польза?
                 </h3>
@@ -519,7 +522,7 @@
                     <img src="images/puls-pink.svg" alt="">
                 </div>
             </div>
-            <div class="quest__item">
+            <div class="quest__item" data-type="popup-quest-5">
                 <h3 class="quest__title">
                     Почему ксилит защищает от кариеса?
                 </h3>
@@ -527,7 +530,7 @@
                     <img src="images/puls-pink.svg" alt="">
                 </div>
             </div>
-            <div class="quest__item">
+            <div class="quest__item" data-type="popup-quest-6">
                 <h3 class="quest__title">
                     Как снизить сахарозависимость у детей?
                 </h3>
@@ -535,7 +538,7 @@
                     <img src="images/puls-pink.svg" alt="">
                 </div>
             </div>
-            <div class="quest__item">
+            <div class="quest__item" data-type="popup-quest-7">
                 <h3 class="quest__title">
                     Чем ксилит лучше сахара, фруктозы и сорбита?
                 </h3>
@@ -669,60 +672,65 @@
         </div>
 
         <div class="answer__row">
-            <div class="answer__item min-width">
-                <div class="answer__item-body">
-                    <div class="answer__quote">
-                        родители
+            <div class="answer__row-two">
+                <div class="answer__item min-width">
+                    <div class="answer__item-body">
+                        <div class="answer__quote">
+                            родители
+                        </div>
+                        <div class="slide-rew__title answer__title">
+                            Действительно ли работают леденцы с ксилитом?
+                        </div>
+                        <p class="slide-rew__text answer__text">
+                            Долго искала замену конфетам, ребёнок у меня тот ещё сладкоежка. Леденцы с ксилитом стали спасением: никакого сахара и химии, а вкус просто супер! Ребёнок в восторге! Также хочется отметить удобные порционные пакетики всегда можно взять с собой.
+                        </p>
                     </div>
-                    <div class="slide-rew__title answer__title">
-                        Действительно ли работают леденцы с ксилитом?
+                </div>
+                <div class="answer__item">
+                    <div class="answer__item-body">
+                        <div class="answer__item-fon-one">
+                            <picture>
+                                <source media="(max-width: 768px)" srcset="images/answer/answer-fon1-mob.svg">
+                                <img loading="lazy" src="images/answer/answer-fon1.svg" alt="">
+                            </picture>
+                        </div>
+                        <div class="answer__quote">
+                            стоматоллоги
+                        </div>
+                        <div class="slide-rew__title answer__title">
+                            Можно ли заменить конфеты леденцами Xylipop?
+                        </div>
+                        <p class="slide-rew__text answer__text">
+                            Рекомендую давать ребёнку по 2–3 леденца без сахара и аспартама после еды или перед сном. Для точной дозировки и заказа обращайтесь в чат-бот — там дадут всю информацию и проконсультируют по любым вопросам.
+                        </p>
                     </div>
-                    <p class="slide-rew__text answer__text">
-                        Долго искала замену конфетам, ребёнок у меня тот ещё сладкоежка. Леденцы с ксилитом стали спасением: никакого сахара и химии, а вкус просто супер! Ребёнок в восторге! Также хочется отметить удобные порционные пакетики всегда можно взять с собой.
-                    </p>
                 </div>
             </div>
-            <div class="answer__item">
-                <div class="answer__item-body">
-                    <div class="answer__item-fon-one">
-                        <picture>
-                            <source media="(max-width: 768px)" srcset="images/answer/answer-fon1-mob.svg">
-                            <img loading="lazy" src="images/answer/answer-fon1.svg" alt="">
-                        </picture>
+            <div class="answer__row-two">
+                <div class="answer__item">
+                    <div class="answer__item-body">
+                        <div class="answer__item-fon-two">
+                            <img loading="lazy" src="images/answer/answer-fon2.svg" alt="">
+                        </div>
+                        <div class="answer__quote">
+                            стоматоллоги
+                        </div>
+                        <div class="slide-rew__title answer__title">
+                            Как предотвратить кариес у ребёнка?
+                        </div>
+                        <p class="slide-rew__text answer__text">
+                            Как врач-стоматолог с 12-летним опытом, могу подтвердить: леденцы на ксилите действительно безопасны и эффективны для профилактики кариеса у детей. Отсутствие сахара и аспартама снижает риск разрушения эмали, а ксилит подавляет рост Streptococcus mutans, нормализует pH полости рта и стимулирует выработку слюны.
+                        </p>
                     </div>
-                    <div class="answer__quote">
-                        стоматоллоги
+    
+                </div>
+                <div class="answer__item min-width">
+                    <div class="answer__item-img">
+                        <picture><source srcset="images/answer/answer-img.webp" type="image/webp"><img class="cover" src="images/answer/answer-img.png" alt=""></picture>
                     </div>
-                    <div class="slide-rew__title answer__title">
-                        Можно ли заменить конфеты леденцами Xylipop?
-                    </div>
-                    <p class="slide-rew__text answer__text">
-                        Рекомендую давать ребёнку по 2–3 леденца без сахара и аспартама после еды или перед сном. Для точной дозировки и заказа обращайтесь в чат-бот — там дадут всю информацию и проконсультируют по любым вопросам.
-                    </p>
                 </div>
             </div>
-            <div class="answer__item">
-                <div class="answer__item-body">
-                    <div class="answer__item-fon-two">
-                        <img loading="lazy" src="images/answer/answer-fon2.svg" alt="">
-                    </div>
-                    <div class="answer__quote">
-                        стоматоллоги
-                    </div>
-                    <div class="slide-rew__title answer__title">
-                        Как предотвратить кариес у ребёнка?
-                    </div>
-                    <p class="slide-rew__text answer__text">
-                        Как врач-стоматолог с 12-летним опытом, могу подтвердить: леденцы на ксилите действительно безопасны и эффективны для профилактики кариеса у детей. Отсутствие сахара и аспартама снижает риск разрушения эмали, а ксилит подавляет рост Streptococcus mutans, нормализует pH полости рта и стимулирует выработку слюны.
-                    </p>
-                </div>
 
-            </div>
-            <div class="answer__item min-width">
-                <div class="answer__item-img">
-                    <picture><source srcset="images/answer/answer-img.webp" type="image/webp"><img class="cover" src="images/answer/answer-img.png" alt=""></picture>
-                </div>
-            </div>
         </div>
     </div>
 </div>
@@ -1046,6 +1054,443 @@
         </div>
     </div>
 </div>
+
+
+
+<div class="popup popup-vict" data-popup="popup-vict-1" data-close-overlay>
+    <div class="popup__wrapper" data-close-overlay>
+        <div class="popup__content popup-vict__content">
+            <div class="popup-vict__fon">
+                <picture>
+                    <source media="(max-width: 768px)" srcset="images/popup-vict/popup-vict-fon-mob.png">
+                    <img loading="lazy" src="images/popup-vict/popup-vict-fon.png" alt="">
+                </picture>
+            </div>
+            <button class="button-close popup__close popup-vict__close" type="button">
+                <img src="images/brn-close.svg" alt="">
+            </button>
+            <div class="popup-vict__body">
+                <div class="bs-title popup-tara__title popup-vict__title">
+                    Streptococcus mutans
+                </div>
+                <div class="bs-text popup-vict__text">
+                    Главный враг здоровья зубов – бактерии Streptococcus mutans! Эти бактерии любят сахар! Они выделяют кислоту, которая разрушает эмаль и запускает кариес.
+                </div>
+
+                <div class="_one popup-vict__bacterium">
+                    <img src="images/popup-vict/popup-vict-bacterium1.svg" alt="">
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<div class="popup popup-vict" data-popup="popup-vict-2" data-close-overlay>
+    <div class="popup__wrapper" data-close-overlay>
+        <div class="popup__content popup-vict__content">
+            <div class="popup-vict__fon">
+                <picture>
+                    <source media="(max-width: 768px)" srcset="images/popup-vict/popup-vict-fon-mob.png">
+                    <img loading="lazy" src="images/popup-vict/popup-vict-fon.png" alt="">
+                </picture>
+            </div>
+            <button class="button-close popup__close popup-vict__close" type="button">
+                <img src="images/brn-close.svg" alt="">
+            </button>
+            <div class="popup-vict__body">
+                <div class="bs-title popup-tara__title popup-vict__title">
+                    Ксилитол
+                </div>
+                <div class="bs-text popup-vict__text">
+                    Секретное оружие! Ксилитол блокирует рост вредных бактерий и помогает сохранить зубы крепкими.
+                </div>
+
+                <div class="_one popup-vict__bacterium">
+                    <img src="images/popup-vict/popup-vict-bacterium2.svg" alt="">
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<div class="popup popup-vict" data-popup="popup-vict-3" data-close-overlay>
+    <div class="popup__wrapper" data-close-overlay>
+        <div class="popup__content popup-vict__content _two">
+            <div class="popup-vict__fon">
+                <picture>
+                    <source media="(max-width: 768px)" srcset="images/popup-vict/popup-vict-fon-mob.png">
+                    <img loading="lazy" src="images/popup-vict/popup-vict-fon.png" alt="">
+                </picture>
+            </div>
+            <button class="button-close popup__close popup-vict__close" type="button">
+                <img src="images/brn-close.svg" alt="">
+            </button>
+            <div class="popup-vict__body">
+                <div class="bs-title popup-tara__title popup-vict__title">
+                    Механизм образования кариеса
+                </div>
+                <div class="popup-vict__img">
+                    <picture><source srcset="images/popup-vict/popup-vict-img.webp" type="image/webp"><img src="images/popup-vict/popup-vict-img.png" alt=""></picture>
+                </div>
+                <div class="bs-text popup-vict__text">
+                    <b>1.</b> При употреблении продуктов с содержанием сахара, в полости рта образуется кислая среда. pH ниже 5,5
+                    <br><b>2.</b> Запускается процесс деминерализации — зубная ткань теряет важные строительные элементы такие как кальций
+                    <br><b>3.</b> В кислой среде зубной налёт образуется намного эффективнее, в свою очередь и сам зубной налёт тоже имеет кислый pH, что усугубляет процесс деминерализации
+                    <br><b>4.</b> Появляется кариес — зуб заболел!
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+
+<div class="popup popup-quest" data-popup="popup-quest-1" data-close-overlay>
+    <div class="popup__wrapper" data-close-overlay>
+        <div class="popup__content popup-quest__content">
+            <button class="button-close popup__close popup-quest__close" type="button">
+                <img src="images/brn-close.svg" alt="">
+            </button>
+
+            <div class="popup-quest__body">
+                <div class="popup-quest__tooth">
+                    <img src="images/popup-quest/tooth.svg" alt="">
+                </div>
+
+                <div class="bs-title popup-quest__title">
+                    Ксилит — безопасный заменитель сахара, который любят дети и их стоматологи
+                </div>
+                <div class="popup-quest__row">
+                    <div class="popup-quest__item">
+                        <div class="popup-quest__item-text">
+                            <p>
+                                Многие дети любят сладкое, но именно сладости и конфеты с высоким содержанием сахара становятся причиной кариеса уже на молочных зубах, которые подвержены разрушению намного сильнее, чем коренные зубы. Несмотря на то, что молочные зубы сменяются в достаточно раннем возрасте —  сохранить их здоровье необходимо, ведь от состояния молочных зубов впоследствии зависит и здоровье постоянных коренных.
+                            </p>
+                        </div>
+                    </div>
+                    <div class="popup-quest__item">
+                        <div class="popup-quest__item-xyli">
+                            <img src="images/popup-quest/xyli.svg" alt="">
+                        </div>
+                        <div class="bs-title popup-quest__item-title m-b">
+                            Как угодить маленьким сладкоежкам без вреда для 
+                            <br>их здоровья?
+                        </div>
+                        <div class="popup-quest__item-body">
+                            <div class="popup-quest__item-text">
+                                <p>
+                                    Ксилит стал прекрасным выбором в качестве натурального заменителя сахара, так как его сладость не уступает другим сахарозаменителям и нравится детям. При этом, несмотря на сладкий вкус, ксилит обладает более низкой калорийностью по сравнению с обычным сахаром. Он также поддерживает здоровье зубов, предотвращая размножение бактерий, вызывающих кариес, снижая образование налета и способствуя восстановлению эмали.
+                                </p>
+                                <p>
+                                    Благодаря этим качествам ксилит стал любимым продуктом не только для малышей-сладкоежек, но и для стоматологов, заботящихся о здоровье полости рта своих пациентов.  
+                                </p>
+                                <p>
+                                    <span class="big">
+                                        <b>Больше никаких детских слез от запретов на сладкое!</b>
+                                    </span>
+                                </p>
+                                <p>
+                                    Вы сможете достаточно легко заменить привычные ребенку конфеты на леденцы с ксилитом Ксилипоп, тем самым сохранив здоровье зубов своего малыша.     
+                                </p>
+                                <p>
+                                    Ксилит также выделяется низким гликемическим индексом, что предотвращает резкие колебания уровня сахара в крови. Это делает его безопасным выбором для людей, которым важно контролировать уровень глюкозы, включая детей. Еще один доказанный факт: ксилит предотвращает развитие отита у детей. Поскольку ксилит является естественным веществом, вырабатываемым в организме в процессе метаболизма, случаи аллергии  на него бывают крайне редкими. 
+                                </p>
+                                <p>
+                                    Наши друзья-стоматологи, любят также давать Ксилипопы детям по-время полета в самолете. Это снижает уровень закладывания ушей и занимает вашего малыша на какое-то время.
+                                </p>
+                                <p>
+                                    <b>Таким образом, ксилит представляет собой не только вкусный, но и полезный заменитель сахара, который помогает заботиться о здоровье зубов и способствует поддержанию сбалансированного рациона.</b>
+                                </p>
+                            </div>
+                            <div class="popup-quest__item-img">
+                                <picture><source srcset="images/popup-quest/popup-quest-img3.webp" type="image/webp"><img src="images/popup-quest/popup-quest-img3.png" alt=""></picture>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<div class="popup popup-quest" data-popup="popup-quest-4" data-close-overlay>
+    <div class="popup__wrapper" data-close-overlay>
+        <div class="popup__content popup-quest__content">
+            <button class="button-close popup__close popup-quest__close" type="button">
+                <img src="images/brn-close.svg" alt="">
+            </button>
+
+            <div class="popup-quest__body">
+                <div class="bs-title popup-quest__title">
+                    Леденцы без сахара: что внутри и почему они полезны детям?
+                </div>
+                <div class="popup-quest__row">
+                    <div class="popup-quest__item">
+                        <div class="popup-quest__item-text">
+                            <p>
+                                Большинство родителей озабочены здоровьем своих малышей, а малыши всем другим вкусам предпочитает сладкий. Для того, чтобы избежать негативных последствий от регулярного употребления сахара, но не лишать ребенка любимого вкуса, многие родители предлагают леденцы без сахара, которые не вредят здоровью.
+                            </p>
+                        </div>
+                    </div>
+                    <div class="popup-quest__item">
+                        <div class="popup-quest__item-bacter _2">
+                            <img src="images/popup-quest/popup-quest-bacterium2.svg" alt="">
+                        </div>
+                        <div class="bs-title popup-quest__item-title m-b">
+                            Но что же скрывается внутри этих лакомств и почему 
+                            <br>они могут быть полезны для детей?
+                        </div>
+                        <div class="popup-quest__item-body">
+                            <div class="popup-quest__item-text">
+                                <p>
+                                    <b>1. Полезные леденцы без сахара часто содержат натуральные заменители сахара, такие как ксилит, эритрит или стевия.</b> Эти ингредиенты обеспечивают сладкий вкус, но при этом имеют низкую калорийность и не вызывают резких скачков уровня сахара в крови. Это особенно важно для детей, так как стабильный уровень глюкозы помогает поддерживать энергию и концентрацию.
+                                </p>
+                                <p>
+                                    <b>2. Многие леденцы без сахара дополнительно обогащены необходимыми витаминами и минералами.</b> Например, некоторые из них могут содержать витамин C или экстракты трав, которые поддерживают иммунную систему и способствуют общему здоровью. Это делает такие сладости не только вкусными, но и полезными. А леденцы из ксилита в свою очередь, еще и можно назвать щелочным продуктом, так как они не понижают pH в полости рта. 
+                                </p>
+                                <p>
+                                    <b>3. Леденцы без сахара чаще не содержат искусственных красителей и консервантов, что делает их более безопасным выбором для детей.</b> Родители могут быть уверены, что их дети наслаждаются сладостями, которые не содержат вредных добавок.
+                                </p>
+                                <p>
+                                    <b>Таким образом, леденцы без сахара — это отличный способ побаловать детей, не беспокоясь об их здоровье. Они предлагают сладкий вкус без негативных последствий, что делает их идеальным выбором для маленьких сладкоежек.</b>
+                                </p>
+                                <p>
+                                     Самой полезной альтернативой среди сладостей без сахара станут леденцы с ксилитом, заменив ими привычные конфеты вы сможете позаботиться не только об уменьшении негативного влияния сахара на детский организм, но и о здоровье зубов и полости рта вашего малыша.
+                                </p>
+                            </div>
+                            <div class="popup-quest__item-img">
+                                <picture><source srcset="images/popup-quest/popup-quest-img2.webp" type="image/webp"><img src="images/popup-quest/popup-quest-img2.png" alt=""></picture>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<div class="popup popup-quest" data-popup="popup-quest-5" data-close-overlay>
+    <div class="popup__wrapper" data-close-overlay>
+        <div class="popup__content popup-quest__content">
+            <button class="button-close popup__close popup-quest__close" type="button">
+                <img src="images/brn-close.svg" alt="">
+            </button>
+
+            <div class="popup-quest__body">
+                
+                
+                <div class="bs-title popup-quest__title">
+                    Как ксилит защищает от кариеса
+                </div>
+                <div class="popup-quest__row">
+                    <div class="popup-quest__item">
+                        <div class="bs-title popup-quest__item-title">
+                            Ксилит доказано эффективен в борьбе с кариесом и рекомендуется стоматологами для профилактики заболеваний зубной эмали во всем мире.
+                        </div>
+                        <div class="popup-quest__item-text m-b">
+                            <p>
+                                Ещё в 1970-е годы в Финляндии было проведено масштабное исследование, в рамках которого оценивали связь развития кариеса с потреблением сахарозы, фруктозы и ксилита. В ходе наблюдения сравнивали динамику кариозных процессов и частоту появления новых очагов поражения у групп, получавших различные подсластители. По итогам двухлетнего периода в ксилитовой когорте не зарегистрировали ни прогрессирования кариеса, ни возникновения новых поражённых участков, что свидетельствует о низкой кариесогенности и протективном эффекте ксилита.
+                            </p>
+                        </div>
+                        <div class="popup-quest__item-body">
+                            <div class="popup-quest__item-text">
+                                <p>
+                                    Ксилит обладает убедительной клинической базой в профилактике кариеса и на основании отчётов из последующих исследований: в ряде исследований зарегистрированное снижение заболеваемости варьировало от 13,4% до 60% в периоды наблюдения от шести месяцев до трёх лет.
+                                    <br>Ксилит является абсолютно безопасным для здоровья натуральным веществом, которое также вырабатывается в организме человека в процессе метаболизма и содержится в различных продуктах питания: берёзовом соке, малине, бананах, грибах, сливах…
+                                </p>
+                            </div>
+                            <div class="popup-quest__item-img">
+                                <picture><source srcset="images/popup-quest/popup-quest-img4.webp" type="image/webp"><img src="images/popup-quest/popup-quest-img4.png" alt=""></picture>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="popup-quest__item">
+                        <div class="bs-title popup-quest__item-title m-b">
+                            Ксилит защищает от кариеса благодаря 
+                            <br>нескольким механизмам действия
+                        </div>
+                        <div class="popup-quest__item-body">
+                            <div class="_1 popup-quest__item-bacter">
+                                <img src="images/popup-quest/popup-quest-bacterium1.svg" alt="">
+                            </div>
+                            <div class="popup-quest__item-bacter _3">
+                                <img src="images/popup-quest/popup-quest-bacterium3.svg" alt="">
+                            </div>
+                            <div class="popup-quest__item-text">
+                                <p>
+                                    <b>1. Снижение уровня бактерий:</b>
+                                    <br>Ксилит эффективно подавляет рост и распространение бактерий, ответственных за развитие кариеса, таких как Streptococcus mutans. Эти микроорганизмы для своей жизнедеятельности используют сахар, который, в свою очередь, приводит к образованию кислот, разрушающих зубную эмаль. В отличие от сахара, ксилит не является источником питания для этих бактерий, что способствует снижению их количества в ротовой полости.
+                                </p>
+                                <p>
+                                    <b>2. Улучшение минерализации зубов:</b>
+                                    <br>Ксилит способствует процессу реминерализации зубной эмали. Он помогает в восстановлении минералов, таких как кальций и фосфор, которые необходимы для укрепления зубов.
+                                </p>
+                                <p>
+                                    <b>3. Увлажнение слюны:</b>
+                                    <br>Ксилит стимулирует выработку слюны, что важно для защиты зубов. Слюна содержит минералы, которые помогают нейтрализовать кислоты и восстанавливать зубную эмаль.
+                                </p>
+                                <p>
+                                    <b>4. Снижение кислотности:</b>
+                                    <br>Потребление ксилита способствует поддержанию более нейтрального уровня pH в ротовой полости, что, в свою очередь, уменьшает вероятность возникновения кариеса. Когда уровень кислотности низкий, это создаёт менее благоприятную среду для роста бактерий, ответственных за развитие кариеса.
+                                </p>
+                                <p>
+                                    <b>5. Препятствие образованию зубного налёта:</b>
+                                    <br>Ксилит способствует снижению формирования зубного налёта, что, в свою очередь, уменьшает вероятность возникновения кариеса и развития заболеваний дёсен.
+                                    <br>Следовательно, его регулярное употребление может быть полезным инструментом в профилактике кариеса и поддержании общего здоровья полости рта.
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="popup-quest__item m-w">
+                        <div class="popup-quest__item-text">
+                            <p>
+                                Источник:
+                                <br>Campus, G., Cagetti, M. G., Sale, S., Petruzzi, M., Solinas, G., Strohmenger, L., & Lingström, P. (2012). Six months of high-dose xylitol in high-risk caries subjects-a 2 — year randomised, clinical trial. Clinical Oral Investigations, 17(3), 785–791. <a href="https://doi.org/10.1007/s00784–012–0774–5">https://doi.org/10.1007/s00784–012–0774–5</a>
+                                <br>Milgrom, P., Ly, K. A., Tut, O. K., Mancl, L., Roberts, M. C., Briand, K., & Gancio, M. J. (2009). Xylitol Pediatric Topical Oral Syrup to Prevent Dental Caries. Archives of Pediatrics & Adolescent Medicine, 163(7), 601. <a href="https://doi.org/10.1001/archpediatrics.2009.77">https://doi.org/10.1001/archpediatrics.2009.77</a>
+                                <br>Alanen, P., Isokangas, P., & Gutmann, K. (2000). Xylitol candies in caries prevention: results of a field study in Estonian children. Community Dentistry and Oral Epidemiology, 28(3), 218–224. <a href="https://doi.org/10.1034/j.1600–0528.2000.280308.x">https://doi.org/10.1034/j.1600–0528.2000.280308.x</a>
+                                <br>Honkala, E., Honkala, S., Shyama, M., & Al-Mutawa, S. A. (2006). Field Trial on Caries Prevention with Xylitol Candies among Disabled School Students. Caries Research, 40(6), 508–513. <a href="https://doi.org/10.1159/000095650">https://doi.org/10.1159/000095650</a>
+                            </p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<div class="popup popup-quest" data-popup="popup-quest-6" data-close-overlay>
+    <div class="popup__wrapper" data-close-overlay>
+        <div class="popup__content popup-quest__content">
+            <button class="button-close popup__close popup-quest__close" type="button">
+                <img src="images/brn-close.svg" alt="">
+            </button>
+
+            <div class="popup-quest__body">
+                <div class="bs-title popup-quest__title">
+                    Как заменить сладости у ребенка без слез и с пользой для зубов?
+                </div>
+                <div class="popup-quest__row">
+                    <div class="popup-quest__item">
+                        <div class="bs-title popup-quest__item-title">
+                            Заменить привычные любимые сладости ребенка на полезную альтернативу очень непросто.
+                        </div>
+                        <div class="popup-quest__item-body">
+                            <div class="popup-quest__item-text">
+                                <p>
+                                    Это может вызвать протест, слёзы и чувство лишения у малыша, а у родителей — страх, что ребёнок останется без удовольствия и станет просить конфеты ещё настойчивее, воспринимая их как недоступное и желанное наслаждение.
+                                </p>
+                                <p>
+                                    Чтобы эффективно осуществить замену без слез и с пользой для здоровья, особенно, для зубов, стоит предложить ребенку леденцы на палочке с ксилитом без сахара.
+                                </p>
+                                <p>
+                                    Ксилит представляет собой натуральный подсластитель, который подавляет размножение кариесогенных бактерий, помогает сохранить и восстановить эмаль. Такие леденцы становятся отличной альтернативой обычным сладостям, так как они не только удовлетворяют потребность в сладком, но и заботятся о здоровье зубов.
+                                </p>
+                            </div>
+                            <div class="popup-quest__item-img m-l">
+                                <picture><source srcset="images/popup-quest/popup-quest-img1.webp" type="image/webp"><img src="images/popup-quest/popup-quest-img1.png" alt=""></picture>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="popup-quest__item">
+                        <div class="_1 popup-quest__item-bacter">
+                            <img src="images/popup-quest/popup-quest-bacterium1.svg" alt="">
+                        </div>
+                        <div class="bs-title popup-quest__item-title">
+                            Чтобы переход на полезные леденцы прошёл
+                            <br>гладко, действуйте по шагам:
+                        </div>
+                        <div class="popup-quest__item-body">
+                            <div class="popup-quest__item-text">
+                                <p>
+                                    <b>1. Дайте ребёнку возможность выбора:</b> пусть сам выберет вкус и форму леденца — это создаст у него ощущение участие и контроля, что поможет избежать негативных эмоций и ощущения лишения;
+                                </p>
+                                <p>
+                                    <b>2. Предложите разнообразие:</b> различные формы, вкусы и упаковки делают продукт более привлекательным;
+                                </p>
+                                <p>
+                                    <b>3. Просто и доступно объясните малышу, почему это полезно:</b> сочините короткую историю о том, как ксилит защищает зубы;
+                                </p>
+                                <p>
+                                    <b>4. Превратите процесс в увлекательную игру,</b> например, проведите «сладкий день» с дегустацией различных вкусов леденцов с ксилитом;
+                                </p>
+                                <p>
+                                    <b>5. Поощряйте положительное поведение вместо запретов на привычное сладкое,</b> это поможет избежать негатива.
+                                </p>
+                                <p>
+                                    Так замена сладостей пройдёт без слёз, а здоровье зубов ребёнка при этом получит дополнительную защиту.
+                                </p>
+                                <p>
+                                    <b>Леденцы с ксилитом — это отличный способ удовлетворить потребность малыша в сладостях, заботясь о здоровье зубов и формируя правильные пищевые привычки с раннего возраста.</b>
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<div class="popup popup-quest" data-popup="popup-quest-7" data-close-overlay>
+    <div class="popup__wrapper" data-close-overlay>
+        <div class="popup__content popup-quest__content">
+            <button class="button-close popup__close popup-quest__close" type="button">
+                <img src="images/brn-close.svg" alt="">
+            </button>
+
+            <div class="popup-quest__body">
+                
+                
+                <div class="bs-title popup-quest__title">
+                    Почему мы выбрали ксилит вместо сахара и других заменителей?
+                </div>
+                <div class="popup-quest__row">
+                    <div class="popup-quest__item">
+                        <div class="popup-quest__item-text">
+                            <p>
+                                Среди всех существующих подсластителей для леденцов Xylipop мы выбрали именно ксилит, так как он обладает рядом весомых преимуществ, а его полезные свойства и эффективность в борьбе с заболеваниями зубной эмали клинически доказаны в многочисленных исследованиях, подтверждающих пользу и безопасность этого вещества. Такой научно-изученной и обоснованной базой, на данный момент не обладает ни один другой подсластитель.                            </p>
+                        </div>
+                        <div class="popup-quest__item-row">
+                            <div class="bs-title popup-quest__item-title">
+                                Рассмотрим преимущества ксилита (или ксилитола) по сравнению с сахаром, фруктозой и другими сахарозаменителями.
+                            </div>
+                            <div class="popup-quest__item-img _5">
+                                <picture><source srcset="images/popup-quest/popup-quest-img5.webp" type="image/webp"><img src="images/popup-quest/popup-quest-img5.png" alt=""></picture>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="popup-quest__item">
+                        <div class="popup-quest__item-body">
+                            <div class="popup-quest__item-bacter _4">
+                                <img src="images/popup-quest/popup-quest-bacterium4.svg" alt="">
+                            </div>
+                            <div class="popup-quest__item-text">
+                                <p>
+                                    <b> Вот только основные из них: </b>
+                                </p>
+                                <p>
+                                    <b>1. Низкий гликемический индекс (GI)</b>
+                                    <br>Ксилит характеризуется низким гликемическим индексом, что препятствует резким колебаниям уровня сахара в крови. Это делает его безопасным для будущих матерей и людей с сахарным диабетом, а также удобным выбором для тех, кто контролирует потребление сахара.
+                                </p>
+                                <p>
+                                    <b>2. Безопасность и польза для зубов</b>
+                                    <br>В отличие от сахара и других подсластителей, ксилит не способствует развитию кариеса. Он помогает защитить зубы, уменьшая количество бактерий, вызывающих это заболевание, и содействуя реминерализации зубной эмали. Кроме того, при его употреблении уровень pH в полости рта не опускается ниже критической отметки 5,6. Это делает его незаменимым компонентом для поддержания здоровья ротовой полости.
+                                </p>
+                                <p>
+                                    <b>3. Низкая калорийность</b>
+                                    <br>Ксилит имеет на 40% меньшую калорийность, чем сахар, содержащий приблизительно 4 калории на грамм. Ксилит же предлагает всего 2,4 калории на грамм, что делает его отличным выбором для тех, кто следит за своим рационом.
+                                </p>
+                                <p>
+                                    <b>4. Пребиотические свойства</b>
+                                    <br>Ксилит действует как пребиотик, поддерживая развитие полезных бактерий в кишечнике. Это способствует улучшению пищеварительных процессов и общего состояния желудочно-кишечного тракта.
+                                </p>
+                                <p>
+                                    <b>5. Отсутствие побочных эффектов</b>
+                                    <br>Ксилит обычно хорошо переносится организмом и крайне редко вызывает аллергию. Тем не менее, как и в случае с любыми подсластителями, рекомендуется соблюдать умеренность в его употреблении. Официальная рекомендация ВОЗ на сегодняшний день гласит: употребление обычного сахара не выше 50 гр, в идеале до 25 гр в день, употребление ксилита - 50 гр в день. 
+                                    <br>Мы выбрали ксилит как более здоровую альтернативу сахару и фруктозе благодаря его уникальным полезным свойствам, низкому гликемическому индексу и положительному воздействию на здоровье зубов,полости рта и всего организма в целом.
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
 
 
   </body>
