@@ -8,9 +8,9 @@
   <title>XyliPOP</title>
 
   <link rel="shortcut icon" href="favicon.ico" type="image/x-icon">
-  <link rel="stylesheet" href="css/main.min.css?_v=20250913181600">
+  <link rel="stylesheet" href="css/main.min.css?_v=20250914191330">
 
-  <script defer="defer" src="js/main.min.js?_v=20250913181600"></script>
+  <script defer="defer" src="js/main.min.js?_v=20250914191330"></script>
 </head>
 
   <body>
@@ -26,10 +26,10 @@
         <img src="images/brn-close.svg" alt="">
       </div>
       <ul class="menu__list">
-        <li class="menu__item"><a href="#" class="menu__link">Продукция</a></li>
-        <li class="menu__item"><a href="#" class="menu__link">Преимущества</a></li>
-        <li class="menu__item"><a href="#" class="menu__link">Вопросы и ответы</a></li>
-        <li class="menu__item"><a href="#" class="menu__link">Партнерам</a></li>
+        <li class="menu__item"><a href="#care" class="menu__link">Продукция</a></li>
+        <li class="menu__item"><a href="#advant" class="menu__link">Преимущества</a></li>
+        <li class="menu__item"><a href="#answer" class="menu__link">Вопросы и ответы</a></li>
+        <li class="menu__item"><a href="#partner" class="menu__link">Партнерам</a></li>
         <li class="menu__item lang">
           <a href="#" class="menu__link icon">
             <span>RU |</span>
@@ -55,6 +55,9 @@
             <source data-src="static/about/about-fon.mp4" type="video/mp4">
         </video>
     </div>
+    <div class="about__bg">
+        <picture><source srcset="images/about/about-bg-mob.webp" type="image/webp"><img src="images/about/about-bg-mob.png" alt=""></picture>
+    </div>
     
     <div class="about__container">
         <h1 class="about__title">
@@ -64,7 +67,7 @@
         <p class="about__text">
             Вкусный уход за полостью рта
         </p>
-        <a href="#" class="button about__button">
+        <a href="#signif" class="button about__button">
             Узнать больше
         </a>
         <div class="about__img">
@@ -72,6 +75,7 @@
         </div>
     </div>
 </div>
+        
         <div class="running" data-speed="40">
     <div class="running__row">
         <div class="running__item">
@@ -140,7 +144,7 @@
         </div>
     </div>
 </div>
-        <div class="care">
+        <div class="care" id="care">
     <div class="care__container">
         <div class="care__top">
             <div class="title-quote care__title-up">О нас</div>
@@ -215,7 +219,7 @@
         <div class="_3 victory__bacterium">
             <img src="images/victory/bacterium3.svg" alt="">
         </div>
-        <div class="victory__bacterium _4">
+        <div class="_4 victory__bacterium">
             <img src="images/victory/bacterium4.svg" alt="">
         </div>
         
@@ -231,7 +235,7 @@
         </div>
     
 </div>
-        <div class="advant">
+        <div class="advant" id="advant">
     <div class="advant__container">
         <h2 class="title-quote blue advant__title-up">Преимущества XyliPop</h2>
         <div class="advant__row">
@@ -336,7 +340,7 @@
     </div>
     <div class="useful__trigger">
         <div class="useful__content">
-            <div class="guard">
+            <div class="fix-vh-mob guard">
                 <div class="guard__container">
                     <div class="signif__top where__top guard__top">
                         <h2 class="title-quote guard__title-up">Чем еще полезен Ксили Поп</h2>
@@ -356,6 +360,24 @@
                             </div>
                         </div>
                         <div class="guard__img">
+                            <div class="_1 guard__star">
+                                <img src="images/guard/star1.svg" alt="">
+                            </div>
+                            <div class="guard__star _2">
+                                <img src="images/guard/star2.svg" alt="">
+                            </div>
+                            <div class="guard__star _3">
+                                <img src="images/guard/star3.svg" alt="">
+                            </div>
+                            <div class="guard__star _4">
+                                <img src="images/guard/star4.svg" alt="">
+                            </div>
+                            <div class="guard__star _5">
+                                <img src="images/guard/star5.svg" alt="">
+                            </div>
+                            <div class="guard__star _6">
+                                <img src="images/guard/star6.svg" alt="">
+                            </div>
                             <div class="guard__img-icon">
                                 <img src="images/guard/guard-img-icon.svg" alt="">
                             </div>
@@ -378,7 +400,7 @@
                 </div>
             </div>
     
-            <div class="struct">
+            <div class="fix-vh-mob struct">
                 <div class="struct__container">
                     <div class="struct__row">
                         <div class="struct__img-row">
@@ -464,7 +486,7 @@
     </div>
 
 </div>
-        <div class="signif">
+        <div class="signif" id="signif">
     <div class="signif__container">
         <div class="signif__top">
             <div class="title-quote blue signif__title-up">О важном</div>
@@ -485,7 +507,7 @@
 
     </div>
 </div>
-        <div class="quest">
+        <div class="quest" id="quest">
     <div class="quest__container">
         <h2 class="title-quote blue quest__title-up">Факты о ксилите</h2>
 
@@ -665,7 +687,7 @@
     </div>
 
 </div>
-        <div class="answer">
+        <div class="answer" id="answer">
     <div class="answer__container">
         <div class="reviews__top">
             <h2 class="title-quote blue answer__title-up">Вопросы и ответы</h2>
@@ -734,7 +756,7 @@
         </div>
     </div>
 </div>
-        <div class="partner">
+        <div class="partner" id="partner">
     <div class="partner__container">
         <div class="signif__top partner__top">
             <div class="title-quote blue signif__title-up">Партнёрам</div>
@@ -901,16 +923,16 @@
       </div>
 
       <nav class="footer__menu">
-        <a href="#" class="bs-link footer__menu-item">
-          Gродукция
+        <a href="#care" class="bs-link footer__menu-item">
+          Продукция
         </a>
-        <a href="#" class="bs-link footer__menu-item">
+        <a href="#advant" class="bs-link footer__menu-item">
           Преимущества
         </a>
-        <a href="#" class="bs-link footer__menu-item">
+        <a href="#answer" class="bs-link footer__menu-item">
           Вопросы и ответы
         </a>
-        <a href="#" class="bs-link footer__menu-item">
+        <a href="#partner" class="bs-link footer__menu-item">
           Партнерам
         </a>
       </nav>
@@ -925,7 +947,7 @@
         информационную рассылку от XyliPOP®
       </p>
       <form action="#" class="bot__item-input">
-        <input type="text" name="bot-chat" placeholder="Введите сообщение" class="_req input-text bot__input">
+        <input type="text" name="email" placeholder="Ваш E-mail" class="_req input-text bot__input">
 
         <button type="submit" class="bot__button">
             <svg width="60" height="60" viewBox="0 0 60 60" fill="none" xmlns="http://www.w3.org/2000/svg">
@@ -948,6 +970,13 @@
     </div>
   </div>
 </footer>
+
+      <div class="button-up">
+        <svg width="80" height="80" viewBox="0 0 80 80" fill="none" xmlns="http://www.w3.org/2000/svg">
+          <circle cx="40" cy="40" r="40" fill="#00B4C0"/>
+          <path d="M40.8839 27.1161C40.3957 26.628 39.6043 26.628 39.1161 27.1161L31.1612 35.0711C30.673 35.5592 30.673 36.3507 31.1612 36.8388C31.6493 37.327 32.4408 37.327 32.9289 36.8388L40 29.7678L47.0711 36.8388C47.5592 37.327 48.3507 37.327 48.8388 36.8388C49.327 36.3507 49.327 35.5592 48.8388 35.0711L40.8839 27.1161ZM40 53L41.25 53L41.25 28L40 28L38.75 28L38.75 53L40 53Z" fill="white"/>
+        </svg>
+      </div>
     </div>
 
     <div class="popup" data-popup="popup-1" data-close-overlay>
@@ -1229,7 +1258,7 @@
                         </div>
                     </div>
                     <div class="popup-quest__item">
-                        <div class="popup-quest__item-bacter _2">
+                        <div class="_2 popup-quest__item-bacter">
                             <img src="images/popup-quest/popup-quest-bacterium2.svg" alt="">
                         </div>
                         <div class="bs-title popup-quest__item-title m-b">
@@ -1308,7 +1337,7 @@
                             <div class="_1 popup-quest__item-bacter">
                                 <img src="images/popup-quest/popup-quest-bacterium1.svg" alt="">
                             </div>
-                            <div class="popup-quest__item-bacter _3">
+                            <div class="_3 popup-quest__item-bacter">
                                 <img src="images/popup-quest/popup-quest-bacterium3.svg" alt="">
                             </div>
                             <div class="popup-quest__item-text">
