@@ -1,0 +1,136 @@
+.answer {
+    @include responsive(padding-top, 140, 80);
+    &__container {
+    }
+
+    &__title-up {
+        @include responsive(margin-bottom, 80, 32);
+    }
+
+    &__row {
+        display: flex;
+        // flex-wrap: wrap;
+        @include responsive(gap, 40, 16);
+        flex-direction: column;
+
+    }
+    &__row-two {
+        display: flex;
+        // flex-wrap: wrap;
+        @include responsive(gap, 40, 16);
+
+        @media(max-width:768px){
+            flex-direction: column;
+        }
+    }
+
+    &__item {
+        display: flex;
+        flex: auto;
+        height: auto;
+        @include responsive(border-radius, 25, 15);
+        overflow: hidden;
+        @include responsive(min-height, 480, 306);
+        max-width: vw(1135);
+
+        @media(max-width:768px){
+            max-width: 100%;
+        }
+
+        &.min-width {
+            max-width: vw(665);
+
+            @media(max-width:768px){
+                max-width: 100%;
+            }
+        }
+    }
+
+    &__item-body {
+        position: relative;
+        display: flex;
+        flex-direction: column;
+        @include responsive(padding, 40, 16);
+        background: var(--blue);
+        height: auto;
+        width: 100%;
+        flex: auto;
+    }
+
+    &__item-fon-one {
+        position: absolute;
+        pointer-events: none;
+        @include responsive(width, 726, 358);
+        bottom: 0;
+        right: 0;
+        img {
+            width: 100%;
+            height: auto;
+        }
+
+    }
+    &__item-fon-two {
+        position: absolute;
+        pointer-events: none;
+        width: vw(177);
+        top: vw(40);
+        left: vw(40);
+        img {
+            width: vw(177);
+            height: auto;
+        }
+
+        @media(max-width:768px){
+            display: none;
+        }
+    }
+
+    &__quote {
+        position: relative;
+        z-index: 1;
+        display: inline-block;
+        @include responsive(margin-bottom, 30, 15);
+        margin-left: auto;
+        @include responsive(font-size, 22, 12);
+        text-align: center;
+        @include responsive(padding-top, 12, 6.46);
+        @include responsive(padding-left, 40, 21.5);
+        @include responsive(padding-bottom, 12, 6.46);
+        @include responsive(padding-right, 40, 21.5);
+        @include responsive(border-radius, 40, 22);
+        background: var(--pink);
+    }
+
+    &__title {
+        position: relative;
+        z-index: 1;
+        margin-top: auto;
+    }
+
+    &__text {
+        position: relative;
+        z-index: 1;
+    }
+
+    &__item-img {
+        img {
+            @include responsive(min-height, 480, 306);
+        }
+    }
+
+
+}
+.reviews {
+
+    &__top {
+    }
+}
+.title-quote {
+}
+.min-width {
+}
+.slide-rew {
+
+    &__title {
+    }
+}

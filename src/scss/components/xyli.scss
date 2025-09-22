@@ -14,13 +14,29 @@
     }
     &__btn {
         position: absolute;
+        &:hover {
+            img {
+                animation-play-state: paused;
+            }
+        }
     }
     &__btn.one {
         @include responsive(top, 485, 344);
         @include responsive(left, 180, 55);
+        
+        img {
+            animation: atom-pulse 3s ease-in-out infinite;
+        }
     }
     &__btn.two {
         @include responsive(top, 194, 344);
         @include responsive(right, 745, 55);
+
+
+        img {
+            animation: atom-pulse 3s ease-in-out 2s infinite;
+        }
+
+        
     }
 }

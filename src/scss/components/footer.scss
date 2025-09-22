@@ -1,15 +1,158 @@
 .footer {
-  padding: rem(20) 0;
-  background: var(--black-color);
+  background: var(--green);
+  color: var(--white);
 
+  &__content {
+    position: relative;
+    @include responsive(padding-top, 140, 77);
+    @include responsive(padding-bottom, 40, 16);
+  }
   // .footer__container
   &__container {
-    display: flex;
-    align-items: center;
+  
+  }
 
-    @include media-mx(510) {
+  &__xyli {
+    position: absolute;
+    pointer-events: none;
+    @include responsive(top, 310, 75.3);
+    @include responsive(left, 45, -11.9);
+    @include responsive(width, 439, 170.7);
+    img {
+      @include responsive(width, 439, 170.7);
+      height: auto;
+    }
+  }
+  &__top {
+    display: flex;
+    @include responsive(gap, 235, 32);
+
+    @media(max-width:768px){
+        flex-direction: column;
+        padding-left: vw(120, 390);
+    }
+  }
+
+  &__logo {
+    @include responsive(width, 235, 131);
+
+    img {
+      width: 100%;
+    }
+  }
+
+  &__menu {
+    display: flex;
+    @include responsive(gap, 55, 10);
+    @include responsive(margin-bottom, 80, 50);
+
+    @media(max-width:768px){
+        flex-direction: column;
+    }
+  }
+
+  &__menu-item {
+    @include responsive(font-size, 20, 17);
+    letter-spacing: 0.02em;
+    color: var(--white);
+    transition: all 0.3s ease  0s;
+
+    @media(min-width:769px){
+      &:hover  {  
+          color: var(--white);
+          transform: scale(1.03);
+      }
+  }
+  &:active {
+      transform: scale(0.98);
+  }
+  }
+
+  &__form {
+    @include responsive(margin-left, 470, 0);
+    max-width: vw(705);
+    @include responsive(margin-bottom, 353, 80);
+    @media(max-width:768px){
+        max-width: 100%;
+    }
+  }
+
+  &__tooth {
+    @include responsive(width, 1054, 358);
+    pointer-events: none;
+    img {
+      width: 100%;
+    }
+
+    @media(min-width:769px){
+        position: absolute;
+        right: vw(38);
+        bottom: vw(-357);
+    }
+    @media(max-width:768px){
+        margin-bottom: vw(40, 390);
+    }
+  }
+
+  &__form-title {
+    @include responsive(font-size, 42, 20);
+    font-family: BalsamiqSans;
+    @include responsive(margin-bottom, 20, 16);
+  }
+
+  &__form-text {
+    @include responsive(font-size, 18, 17);
+    @include responsive(margin-bottom, 40, 32);
+    @include responsive(max-width, 360, 340);
+  }
+
+  &__bot {
+    display: flex;
+    flex-direction: column;
+    @include responsive(gap, 40, 16);
+
+    p {
+      @include responsive(max-width, 325, 256);
+      @include responsive(font-size, 14, 11);
+      color: var(--white);
+    }
+    a {
+      color: var(--white);
+    }
+  }
+
+  &__row { 
+    display: flex;
+    @include responsive(gap, 100, 16);
+   
+    @media(max-width:768px){
+
       flex-direction: column;
-      align-items: flex-start;
+    }
+
+
+    p:nth-child(1) {
+      @include responsive(max-width, 370, 290);
+    }
+    p:nth-child(2) {
+      @include responsive(max-width, 370, 342);
+    }
+  }
+
+
+  .bot {
+
+    &__item-input {
+    }
+  
+    &__input {
+      background: var(--white);
+    }
+  
+    &__button {
     }
   }
 }
+.bs-link {
+}
+

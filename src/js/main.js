@@ -6,9 +6,10 @@
 
  * Если мы хотим добавить модуль следует его раскомментировать
  */
+import MousePRLX from './libs/parallax-mouse.js';
 // import MousePRLX from './libs/parallaxMouse'
-// import AOS from 'aos'
-// import Swiper, { Navigation, Pagination } from 'swiper';
+import AOS from 'aos'
+import Swiper, { Navigation, Pagination } from 'swiper';
 
 import BaseHelpers from './helpers/base-helpers';
 import PopupManager from './modules/popup-manager';
@@ -17,6 +18,8 @@ import { autoplayVideo } from './modules/autoplayVideo';
 import { runningInit } from './libs/running';
 import { animGsap } from './modules/animGsap';
 import { smoothScroll } from './modules/smoothScroll';
+import { validForm } from './modules/validFrom';
+import { fixVHUnitsOnMobile } from './modules/fixVHUnitsOnMobile';
 // import Tabs from './modules/tabs';
 // import Accordion from './modules/accordion';
 
@@ -42,7 +45,7 @@ BaseHelpers.headerFixed();
  * На обертку(.popup) окна добавь атрибут '[data-close-overlay]'
  * На кнопку для закрытия окна добавь класс '.button-close'
  * */
-// new PopupManager();
+new PopupManager();
 
 /** ===================================================================================
  *  Модуль для работы с меню (Бургер)
@@ -53,12 +56,17 @@ new BurgerMenu().init();
  *  Библиотека для анимаций
  *  документация: https://michalsnik.github.io/aos
  * */
-// AOS.init();
+
+window.addEventListener('load', () => {
+	setTimeout(() => {
+		AOS.init();
+	}, 1000);
+})
 
 /** ===================================================================================
  * Параллакс мышей
  * */
-// new MousePRLX();
+new MousePRLX();
 
 
 /* ТАБЫ ================================================================================================
@@ -101,8 +109,9 @@ new BurgerMenu().init();
 
 /* Cкрыть меню при клике на его ссылки ==================================================================
 */
-// import { toggleLinkMenuNoOpen } from './modules/index.js'
-//toggleLinkMenuNoOpen()
+import { toggleLinkMenuNoOpen } from './modules/index.js'
+
+toggleLinkMenuNoOpen()
 
 /* Cкрыть меню при клике вне его ========================================================================
 	* Добавить к меню класс 'your-menu'
@@ -119,6 +128,19 @@ new BurgerMenu().init();
 
 /* Инициализация  swiper =================================================================================
 */
+const rewiewsSlider = new Swiper('.reviews__slider', {
+  speed: 1200,
+  spaceBetween: 0,
+  slidesPerView: 'auto',
+  modules: [Navigation],
+
+  navigation: {
+    prevEl: ".reviews__btn-prev",
+    nextEl: ".reviews__btn-next"
+  },
+});
+
+
 // const swiper = new Swiper('.swiper', {
 //   speed: 800,
 //   spaceBetween: 16,
@@ -168,7 +190,11 @@ new BurgerMenu().init();
 // const formNAME = document.getElementById('form-NAME')
 
 //==== валидация ====
-// validForm(fromName, popupTranks)
+const forms = document.querySelectorAll('form')
+forms.forEach(form => {
+	validForm(form)
+});
+
 //==== отправка ====
 
 //==== валидация ====
@@ -199,12 +225,127 @@ new BurgerMenu().init();
 
 
 
+window.addEventListener('load', fixVHUnitsOnMobile())
+
+window.addEventListener('load', autoplayVideo())
+
+// window.addEventListener('load', animGsap())
+animGsap()
+
+window.addEventListener('load', runningInit())
 
 
-window.addEventListener('load', autoplayVideo)
 
-window.addEventListener('load', animGsap)
 
-window.addEventListener('load', runningInit)
+
+// Прокручивание элемента к низу
+const botChat = document.querySelector('.bot-chat');
+function scrollToBottomSmooth() {
+    botChat.scrollTo({
+        top: botChat.scrollHeight,
+        behavior: 'smooth'
+    });
+}
+// При загрузке страницы
+window.addEventListener('load', scrollToBottomSmooth);
+// При изменении содержимого
+const observer = new MutationObserver(scrollToBottomSmooth);
+observer.observe(botChat, { 
+    childList: true, 
+    subtree: true 
+});
+
+
+//скрыть показать шапку
+class HeaderStickyManager {
+    constructor() {
+        this.usefulElement = document.querySelector('.useful');
+        this.htmlElement = document.documentElement;
+        
+        this.init();
+    }
+    
+    init() {
+        if (!this.usefulElement) return;
+        
+        this.createObserver();
+    }
+    
+    createObserver() {
+        const options = {
+            root: null,
+            rootMargin: '-5% 0px -5% 0px', // 5vh сверху и 5vh снизу
+            threshold: 0
+        };
+        
+        this.observer = new IntersectionObserver((entries) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    // Элемент visible в зоне 5vh - УБИРАЕМ класс
+                    this.htmlElement.classList.add('header-is-hidden');
+                } else {
+                    // Элемент outside зоны 5vh - ДОБАВЛЯЕМ класс
+                    this.htmlElement.classList.remove('header-is-hidden');
+                }
+            });
+        }, options);
+        
+        this.observer.observe(this.usefulElement);
+    }
+    
+    destroy() {
+        if (this.observer) {
+            this.observer.disconnect();
+        }
+    }
+}
+// Инициализация
+document.addEventListener('DOMContentLoaded', () => {
+    new HeaderStickyManager();
+});
+
+
+
+// Перезагрузка
+let resizeTimer;
+let currentWidth = window.innerWidth;
+const RELOAD_DELAY = 400;
+const MIN_WIDTH_CHANGE = 1;
+
+    
+function handleResize() {
+    const newWidth = window.innerWidth;
+    const widthDiff = Math.abs(newWidth - currentWidth);
+    
+    
+    if (widthDiff >= MIN_WIDTH_CHANGE) {
+        
+        clearTimeout(resizeTimer);
+        resizeTimer = setTimeout(() => {
+            window.location.reload();r
+        }, RELOAD_DELAY);
+    }
+        
+        currentWidth = newWidth;
+}
+
+window.addEventListener('resize', handleResize);
+
+
+
+//Промотка вверх
+
+function scrollToTop() {
+    window.scrollTo({ top: 0, behavior: 'smooth' });
+}
+const buttonUp = document.querySelector('.button-up');
+
+if (buttonUp) {
+	buttonUp.addEventListener('click', () => {
+		scrollToTop()
+	})
+}
+
+
 
 

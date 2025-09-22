@@ -1,0 +1,223 @@
+
+.victory {
+    position: relative;
+    z-index: 1;
+    @include responsive(margin-top, -46, -9);
+    @include responsive(height, 3000, 2000);
+
+
+    &__body {
+        position: sticky;
+        @include responsive(top, 100, 25);
+        @include responsive(height, 1195, 853);
+    }
+
+    &__fon {
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        z-index: -1;
+
+        img {
+            width: 100%;
+            height: 100%;
+        }
+    }
+
+    &__content {
+        @include responsive(padding-top, 590, 611);
+        height: 100%;
+        width: 100%;
+        position: relative;
+        z-index: 1;
+       
+
+      
+    }
+
+    &__xily {
+        position: absolute;
+        z-index: 2;
+        @include responsive(top, 311.8, 376);
+        @include responsive(right, 548.9, 90.34);
+        @include responsive(width, 262.44, 134.66);
+        img {
+            @include responsive(width, 262.44, 134.66);
+            height: auto;
+
+            animation: xily 5s ease-in-out 0s infinite;
+        }
+    }
+
+    &__tooth {
+        position: relative;
+        @include responsive(width, 389, 199.5);
+        margin-left: auto;
+        margin-right: auto;
+        img {
+            @include responsive(width, 389, 199.5);
+            height: auto;
+        }
+    }
+
+
+    &__tooth-close {
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        z-index: 1;
+        img {
+            @include responsive(width, 389, 199.5);
+            height: auto;
+        }
+
+        animation: tooth 3.5s linear infinite;
+    }
+
+ 
+    @keyframes tooth {
+        0% {
+            opacity: 0;
+        }
+        65% {
+            opacity: 0;
+        }
+        69% {
+            opacity: 1;
+        }
+        97% {
+            opacity: 1;
+        }
+        100% {
+            opacity: 0;
+        }
+    }
+
+    &__bacterium {
+        pointer-events: none;
+        position: absolute;
+        img {
+            width: 100%;
+            height: auto;
+        }
+        &._1 {
+            @include responsive(width, 189.17, 62);
+            @include responsive(top, 482, 364);
+            @include responsive(left, 145, 42);
+
+            img {
+                animation: bacterium 6s ease-in-out 0s infinite;
+            }
+        }
+    
+        &._2 {
+            @include responsive(width, 171, 63.65);
+            @include responsive(top, 173, 70);
+            @include responsive(left, 714, 79);
+
+            img {
+                animation: bacterium 4.5s ease-in-out 4s infinite;
+            }
+
+        }
+    
+        &._3 {
+            @include responsive(width, 193, 65);
+            @include responsive(top, 225, 319);
+            @include responsive(right, 372, 54);
+
+            img {
+                animation: bacterium 7s ease-in-out 2.5s infinite;
+            }
+        }
+    
+        &._4 {
+            @include responsive(width, 174.4, 56.7);
+            @include responsive(top, 779, 98);
+            @include responsive(right, 154.6, 59);
+            img {
+                animation: bacterium 5s ease-in-out 3s infinite;
+            }
+        }
+    }
+
+    &__btn {
+        position: absolute;
+
+        transform-origin: center;
+
+        &._1 {
+            @include responsive(top, 841, 531);
+            @include responsive(left, 305, 18);
+       
+            img {
+                animation: atom-pulse 3s ease-in-out infinite;
+            }
+        }
+    
+        &._2 {
+            @include responsive(top, 360, 230);
+            @include responsive(left, 571, 176);
+
+            img {
+                animation: atom-pulse 3s ease-in-out 0.25s infinite;
+            }
+        }
+    
+        &._3 {
+            @include responsive(top, 862, 735);
+            @include responsive(right, 470, 43);
+            img {
+                animation: atom-pulse 3s ease-in-out 0.5s infinite;
+            }
+        }
+        
+        &:hover {
+            img {
+                animation-play-state: paused;
+            }
+        }
+    }
+
+
+   
+    @keyframes xily {
+        0% {
+          transform: translateY(0%);
+        }
+        25% {
+            transform: translateY(-5%);
+        }
+        50% {
+            transform: translateY(1%);
+        }
+        75% {
+            transform: translateY(-3%);
+        }
+        100% {
+            transform: translateY(0%);
+        }
+    }
+
+    @keyframes bacterium {
+        0% {
+          transform: translateY(0%) translateX(0%);
+        }
+        25% {
+            transform: translateY(-6%) translateX(-6%);
+        }
+        50% {
+            transform: translateY(3%) translateX(4%);
+        }
+        75% {
+            transform: translateY(-3.5%) translateX(2%);
+        }
+        100% {
+            transform: translateY(0%) translateX(0%);
+        }
+    }
+}

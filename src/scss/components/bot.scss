@@ -1,0 +1,202 @@
+.bot {
+    @include responsive(padding-top, 140, 80);
+
+    &__container {
+    }
+    .where__top.signif__top {
+        margin-bottom: 0;
+    }
+    &__title {
+        @include responsive(margin-bottom, 80, 32);
+    }
+
+    &__content {
+        @include responsive(padding-top, 40, 12.82);
+        @include responsive(padding-bottom, 40, 12.82);
+        @include responsive(padding-left, 40, 13.2);
+        @include responsive(padding-right, 40, 23);
+        @include responsive(border-radius, 25, 16);
+        background: var(--blue);
+        max-width: vw(1370);
+        width: 100%;
+
+        @media(max-width:768px){
+            max-width: 100%;
+        }
+    }
+
+    &__chat {
+        @include responsive(padding-top, 20, 40);
+    }
+
+    &__item-input {
+        position: relative;
+    }
+
+    &__input {
+        @include responsive(padding-right, 110, 72);
+        @include responsive(max-height, 80, 52);
+        @include responsive(padding-top, 27.4, 15.6);
+        @include responsive(padding-bottom, 27, 15.2);
+        border-color: #ffffff00 !important;
+    }
+
+    &__button {
+        position: absolute;
+        z-index: 1;
+        @include responsive(top, 10, 6.59);
+        @include responsive(right, 10, 6.59);
+
+        @include responsive(width, 60, 40);
+        @include responsive(height, 60, 40);
+        border-radius: 50%;
+        transition: all 0.3s ease  0s;
+
+        svg {
+            width: 100%;
+            height: auto;
+        }
+
+
+
+    @media(min-width:769px){
+        &:hover  {  
+            transform: scale(1.05);
+        }
+    }
+    &:active {
+        transform: scale(0.98);
+    }
+    }
+}
+
+
+.bot-chat {
+    position: relative;
+    @include responsive(margin-bottom, 20, 53);
+    display: flex;
+    flex-direction: column;
+    @include responsive(gap, 40, 38);
+    @include responsive(max-height, 500, 350);
+    overflow-y: auto;
+    z-index: 1;
+    @include responsive(padding-right, 20, 10);
+    @include responsive(margin-right, -20, -10);
+
+
+    &__item {
+        position: relative;
+        display: inline-block;
+        @include responsive(font-size, 20, 17);
+        @include responsive(padding-left, 42, 28);
+        @include responsive(padding-right, 42, 28);
+        @include responsive(margin-right, 17.27, 11.4);
+        @include responsive(padding-top, 20, 13.2);
+        @include responsive(padding-bottom, 20, 13.2);
+        // @include responsive(border-radius, 80, 53);
+        border-radius: min(vw(80), vw(34));
+
+
+        @media(max-width:768px){
+            border-radius: min(vw(53, 390), vw(21, 390));
+        }
+
+        background: var(--white);
+        width: auto;
+        margin-left: auto;
+
+        &::before {
+            content: '';
+            position: absolute;
+
+            @include responsive(bottom, 1, 1);
+            @include responsive(right, -20, -13);
+            @include responsive(width, 61, 41);
+            @include responsive(height, 32, 23);
+            z-index: -1;
+            /* Маска на основе вашего SVG */
+            mask-image: url("data:image/svg+xml,%3Csvg width='61' height='34' viewBox='0 0 61 34' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M1 1V33H9C17.0966 33 24.4899 29.9913 30.126 25.0332C35.3833 27.5331 48.5119 29.6119 58.2686 27.9785C56.0447 27.1009 40.5903 18.4883 40.7617 4.91895C40.9186 3.63456 41 2.32675 41 1H1Z' fill='white'/%3E%3C/svg%3E");
+            -webkit-mask-image: url("data:image/svg+xml,%3Csvg width='61' height='34' viewBox='0 0 61 34' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M1 1V33H9C17.0966 33 24.4899 29.9913 30.126 25.0332C35.3833 27.5331 48.5119 29.6119 58.2686 27.9785C56.0447 27.1009 40.5903 18.4883 40.7617 4.91895C40.9186 3.63456 41 2.32675 41 1H1Z' fill='white'/%3E%3C/svg%3E");
+            
+            mask-repeat: no-repeat;
+            -webkit-mask-repeat: no-repeat;
+            
+            mask-size: 100% 100%;
+            -webkit-mask-size: 100% 100%;
+            
+            mask-position: center;
+            -webkit-mask-position: center;
+            
+            /* Фон, который будет виден через маску */
+            background: var(--white);
+        }
+
+
+
+
+        &.blue {
+            @include responsive(margin-left, 17.27, 11.4);
+            background: var(--blue-2);
+            margin-right: auto;
+
+            &::before {
+                right: unset;
+                @include responsive(bottom, -1, 0);
+                @include responsive(left, -20, -13);
+                background: var(--blue-2);
+                transform: scaleX(-1);
+            }
+        }
+
+
+        &::after {
+            position: absolute;
+            // content: '';
+            @include responsive(width, 100, 80);
+            @include responsive(height, 34, 21);
+            z-index: -1;
+            background: var(--white);
+            @include responsive(border-top-left-radius, 80, 53);
+            top:0;
+            left: 0;
+        }
+    }
+}
+
+
+/* Контейнер со скроллом */
+.your-scroll-container {
+    overflow-y: auto;
+    scrollbar-width: thin; /* Для Firefox */
+    scrollbar-color: var(--blue-2) transparent; /* Для Firefox */
+}
+
+/* Для Webkit браузеров (Chrome, Safari, Edge) */
+.your-scroll-container::-webkit-scrollbar {
+    @include responsive(width, 5, 3);
+}
+
+.your-scroll-container::-webkit-scrollbar-track {
+    background: transparent; /* Прозрачный трек */
+    @include responsive(margin-top, 2, 2);
+    @include responsive(margin-bottom, 2, 2);
+    margin-right: 0;
+    margin-left: 0;
+}
+
+.your-scroll-container::-webkit-scrollbar-thumb {
+    background-color: var(--blue-2); /* Серый цвет ползунка */
+    @include responsive(border-radius, 3, 3);
+}
+
+.your-scroll-container::-webkit-scrollbar-thumb:hover {
+    background-color: var(--blue-2); /* Темнее при наведении */
+}
+
+.your-scroll-container::-webkit-scrollbar-thumb:active {
+    background-color: var(--blue-2); /* Еще темнее при активном состоянии */
+}
+
+.your-scroll-container::-webkit-scrollbar-corner {
+    background: transparent; /* Угол прозрачный */
+}

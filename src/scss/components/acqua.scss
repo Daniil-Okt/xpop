@@ -1,11 +1,25 @@
 .acqua {
+    position: relative;
     background: var(--blue-2);
+    min-height: vw(2000);
 
+    @media(max-width:768px){
+        min-height: vw(2000, 390);
+    }
+
+    &__body {
+        position: sticky;
+        display: flex;
+        align-items: center;
+
+        @include responsive(top, 200, 100);
+    }
 
     &__container {
         @include responsive(padding-top, 141, 80);
         @include responsive(padding-bottom, 66, 0);
         position: relative;
+        width: 100%;
     }
 
     &__xily {
@@ -26,7 +40,7 @@
         @include responsive(right, 407, 17);
         @include responsive(width, 295, 79);
         @include responsive(height, 295, 79);
-
+        aspect-ratio: 1 / 1;
         img {
             width: 100%;
         }

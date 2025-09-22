@@ -1,0 +1,113 @@
+.choice {
+    @include responsive(padding-top, 140, 80);
+    @include responsive(padding-bottom, 217, 80);
+
+    &__container {
+    }
+
+    &__title {
+        @include responsive(max-width, 1108, 360);
+        @include responsive(font-size, 80, 25);
+        text-align: left;
+
+        b {
+            @include responsive(font-size, 218, 70);
+            font-family: BalsamiqSans;
+            
+        }
+        span.bot-text {
+            display: inline-flex;
+            align-items: center;
+            @include responsive(gap, 20, 7.5);
+        }
+    }
+
+    &__content {
+    }
+
+    &__card {
+        position: relative;
+        @include responsive(margin-top, -363, 0);
+
+        max-width: 80vw;
+        width: 80vw;
+        margin-left: auto;
+
+        @media(max-width:768px){
+            max-width: 100%;
+            width: 100%;
+            margin-left: 0;
+        }
+    }
+    &__card-img {
+        img {
+            width: 100%;
+            aspect-ratio: 1920 / 1464;
+
+            @media(max-width:768px){
+                aspect-ratio: 390 / 377;
+            }
+        }
+    }
+
+    &__card-candy {
+        position: absolute;
+        @include responsive(width, 189, 54.66);
+    
+
+        &:hover {
+            img {
+                transform: rotate(-6deg) scale(1.05);
+            }
+        }
+
+        img {
+            transition: transform 0.3s ease-in-out  0s;
+            @include responsive(width, 189, 54.66);
+            height: auto;
+        }
+
+        &._1 {
+            @include responsive(top, 757, 213.7);
+            @include responsive(left, 27.45, 8.85);
+        }
+        &._2 {
+            @include responsive(top, 567.8, 158.8);
+            @include responsive(left, 233, 67.12);
+        }
+        &._3 {
+            @include responsive(top, 433.8, 119.92);
+            @include responsive(left, 414.3, 119.92);
+        }
+        &._4 {
+            @include responsive(top, 725, 204.36);
+            @include responsive(left, 428.4, 123.5);
+        }
+        &._5 {
+            @include responsive(top, 502.34, 139.8);
+            @include responsive(left, 642, 185);
+        }
+        &._6 {
+            @include responsive(top, 749.15, 211.4);
+            @include responsive(left, 736.6, 212.4);
+        }
+        &._7 {
+            @include responsive(top, 606, 169.9);
+            @include responsive(left, 890.8, 256.86);
+        }
+        &._8 {
+            @include responsive(top, 407.65, 213.7);
+            @include responsive(left, 1252.35, 7.85);
+
+            @media(max-width:768px){
+                display: none;
+            }
+        }
+        &._9 {
+            @include responsive(top, 891.2, 116.56);
+            @include responsive(left, 1638, 319.3);
+        }
+    }
+}
+.green {
+}

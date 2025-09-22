@@ -24,6 +24,7 @@
         @include responsive(font-size, 35, 17, );
         line-height: 120%;
         letter-spacing: 0.02em;
+        font-family: BalsamiqSans;
         img {
             @include responsive(width, 37, 17);
             @include responsive(width, 38, 18);

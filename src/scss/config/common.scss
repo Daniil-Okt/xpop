@@ -4,6 +4,11 @@ body * {
 }
 
 
+
+h1 {
+    font-family: BalsamiqSans;
+}
+
 a, .bs-link {
     color: var(--black);
     transition: color 0.3s ease  0s;
@@ -15,12 +20,13 @@ a, .bs-link {
     }
 }
 
-h2 {
+.bs-title {
     font-weight: 700;
     font-size: 68px;
     @include responsive(font-size, 68, 20);
     line-height: 120%;
     text-align: center;
+    font-family: BalsamiqSans;
 }
 
 .bs-text {
@@ -39,7 +45,7 @@ h2 {
     color: var(--white);
     @include responsive(padding, 25, 15);
     background-color: var(--green);
-    border-radius: 50px;
+    @include responsive(border-radius, 50, 50);
     transition: all 0.3s ease  0s;
 
 
@@ -62,7 +68,7 @@ h2 {
 
 .title-quote {
     display: inline-block;
-    border-radius: 50px;
+    @include responsive(border-radius, 50, 50);
     @include responsive(padding-top, 10, 5);
     @include responsive(padding-bottom, 10, 5);
     @include responsive(padding-left, 40, 20);
@@ -71,6 +77,10 @@ h2 {
     margin-left: auto;
     margin-right: auto;
     background-color: var(--white);
+
+    &.blue {
+        background: var(--blue-2);
+    }
 }
 
 
@@ -79,7 +89,7 @@ h2 {
     @include responsive(width, 55, 40);
     @include responsive(height, 55, 40);
     cursor: pointer;
-    transition: all 0.3s ease  0s;
+    transition: transform 0.3s ease  0s;
 
     img {
         width: 100%;
@@ -94,5 +104,177 @@ h2 {
 
     &:active {
         transform: scale(0.98) rotate(0deg);
+    }
+}
+@keyframes atom-pulse {
+    0% {
+      transform: scale(1);
+    }
+    9% {
+      transform: scale(1.1);
+    }
+    18% {
+      transform: scale(1);
+    }
+    100% {
+      transform: scale(1);
+    }
+}
+
+
+.btn-str-row {
+    display: flex;
+    justify-content: center;
+    gap: vw(40);
+    margin-top: vw(80);
+    @media(max-width:768px){
+        display: none;
+    }
+}
+
+.btn-str {
+    width: vw(80);
+    cursor: pointer;
+    transition: all 0.3s ease  0s;
+    cursor: pointer;
+
+    img {
+        width: vw(80);
+        height: auto;
+    }
+
+
+    @media(min-width:769px){
+        &:hover  {  
+            transform: scale(1.05);
+        }
+    }
+    &:active {
+        transform: scale(0.95);
+    }
+
+    &._right {
+        img {
+            transform: rotate(180deg);
+        }
+    }
+}
+
+
+
+form {
+    button {
+        opacity: 0.7;
+        pointer-events: none;
+    }
+
+    &.unlock button {
+        opacity: 1;
+        pointer-events: all;
+    }
+}
+
+.input-text {
+    @include responsive(font-size, 18, 16);
+    @include responsive(border-radius, 40, 40);
+    @include responsive(padding-top, 30, 15.5);
+    @include responsive(padding-bottom, 28, 13.5);
+    @include responsive(padding-left, 40, 16);
+    @include responsive(padding-right, 40, 16);
+    background: var(--blue-2);
+    border: 1px solid var(--blue-2);
+    @include responsive(border-width, 2, 1.5);
+    width: 100%;
+    transition: all 0.3s ease  0s;
+
+    &._error {
+        border-color: red;
+    }
+
+    &::placeholder {
+        color: var(--green);
+    }
+}
+
+
+.politic-checked {
+    display: flex;
+    align-items: center;
+    @include responsive(gap, 10, 7);
+    @include responsive(font-size, 16, 12);
+    color: #2d2d2d;
+    @include responsive(margin-top, 20, 10);
+
+    &__input {
+        display: none;
+
+        &:checked + .politic-checked__icon::before {
+            transform: scale(1)
+        }
+    }
+
+    &__icon {
+        @include responsive(width, 40, 32);
+        @include responsive(min-width, 40, 32);
+        @include responsive(height, 40, 32);
+        background-color: var(--blue-2);
+        border-radius: 50%;
+        @include responsive(padding, 8, 5);
+
+        &::before {
+            display: block;
+            content: '';
+            width: 100%;
+            height: 100%;
+            background: var(--green);
+            border-radius: 50%;
+            transform: scale(0);
+            transition: all 0.3s ease  0s;
+        }
+    }
+
+    &__text {
+        @include responsive(margin-top, 3, 2);
+    }
+}
+
+
+
+.button-up {
+    position: fixed;
+    @include responsive(right, 40, 16);
+    @include responsive(bottom, 40, 16);
+    @include responsive(width, 80, 40);
+    @include responsive(height, 80, 40);
+    cursor: pointer;
+    z-index: 5;
+    transition: all 0.3s ease  0s;
+    opacity: 0;
+    transform: scale(0);
+    pointer-events: none;
+    box-shadow: 0px 0px 5px #0000007b;
+    border-radius: 50%;
+
+    svg {
+        width: 100%;
+        height: auto;
+    }
+
+
+
+    .header-is-sticky & {
+        opacity: 1;
+        transform: scale(1);
+        pointer-events: all;
+
+
+        @media(min-width:769px){
+            &:hover  {  
+                transform: scale(1.04);
+            }
+        }
+        &:active {
+            transform: scale(0.98);
+        }
     }
 }

@@ -1,0 +1,378 @@
+.useful {
+    position: relative;
+ 
+    
+    background: var(--blue);
+
+    &__trigger {
+        position: relative;
+        overflow: clip;
+        @include responsive(height, 6000, 4000);
+    }
+
+    &__content {
+        position: sticky;
+        top: 0;
+        min-height: 100vh;
+    }
+
+    &__fon-bot, &__fon-top {
+        position: absolute;
+        left: 0;
+        img {
+            width: 100%;
+        }
+    }
+    &__fon-top {
+        bottom: 99.9%;
+
+        @media(max-width:768px){
+            height: vw(14, 390);
+            img {
+                height: vw(13, 390);
+            }
+        }
+    }
+    &__fon-bot {
+        top: 99.9%;
+    }
+  
+}
+
+.guard {
+    position: relative;
+    @include responsive(padding-top, 50, 30);
+    @include responsive(padding-bottom, 50, 30);
+    min-height: 100vh;
+    width: 100%;
+    display: flex;
+    align-items: center;
+
+    &__container {
+        width: 100%;
+    }
+
+    &__top {
+        @include responsive(margin-bottom, 58, 32);
+    }
+
+    &__title-up {
+    }
+
+    &__row {
+        display: grid;
+        grid-template-columns: 1fr auto 1fr;
+        // display: flex;
+        align-items: center;
+
+        @media(min-width:769px){
+            padding-left: vw(100);
+            padding-right: vw(100);
+        }
+        @media(max-width:768px){
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
+    }
+
+    &__item {
+        position: relative;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        @include responsive(gap, 5, 5);
+        width: max-content;
+
+        &.one {
+            @media(min-width:769px){
+                margin-left: right;
+            }
+        }
+        &.two {
+            @media(min-width:769px){
+                margin-left: auto;
+            }
+        }
+    }
+
+    &__advant {
+        // overflow: hidden;
+        width: max-content;
+        @media(min-width:769px){
+            &._bot {
+                position: absolute;
+                top: 100%;
+                left: vw(40);
+                margin-top: vw(20);
+            }
+            &._top {
+                position: absolute;
+                bottom: 100%;
+                right: vw(40);
+                margin-bottom: vw(20);
+            }
+        }
+    }
+
+    &__advant-row {
+        display: inline-flex;
+        align-items: center;
+        width: max-content;
+        @include responsive(gap, 20, 10);
+        @include responsive(font-size, 28, 17);
+    
+    }
+
+    &__advant-icon {
+        @include responsive(width, 80, 29);
+        @include responsive(height, 80, 29);
+
+        img {
+            width: 100%;
+        }
+    }
+
+    &__text {
+        font-weight: 700;
+        font-size: 145px;
+        @include responsive(font-size, 145, 64);
+        line-height: 120%;
+        text-transform: uppercase;
+        text-align: center;
+        color: var(--white);
+        font-family: BalsamiqSans;
+    }
+
+    &__img {
+        position: relative;
+        z-index: 2;
+        // @include responsive(width, 429, 221);
+        width: auto;
+        
+
+        img {
+            width: auto;
+            height: auto;
+            // height: 70vh;
+            max-height: 70vh;
+            @include responsive(max-width, 429, 221);
+
+            @media(max-width:768px){
+                max-height: 50vh;
+            }
+        }
+
+        &-icon {
+            position: absolute;
+            @include responsive(top, 140, 88);
+            @include responsive(left, 10, 1.12);
+            @include responsive(width, 107, 61);
+            img {
+                width: 100%;
+                height: auto;
+            }
+        }
+    }
+
+
+    &__star {
+        position: absolute;
+
+        img {
+            width: 100%;
+        }
+
+        &._1 {
+            width: vw(63);
+            top: vw(77);
+            left: vw(-157);
+            img {
+                animation: rotate 5s linear infinite;
+            }
+            @media(max-width:768px){
+                display: none;
+            }
+        }
+        &._2 {
+            width: vw(55);
+            top: vw(58);
+            right: vw(0);
+            img {
+                animation: rotate 7s linear infinite;
+            }
+            @media(max-width:768px){
+                display: none;
+            }
+        }
+        &._3 {
+            width: vw(39);
+            top: vw(109);
+            right: vw(-520);
+            img {
+                animation: rotate 6s linear infinite;
+            }
+            @media(max-width:768px){
+                display: none;
+            }
+        }
+
+        &._4 {
+            @include responsive(width, 55, 24);
+            bottom: 25%;
+            left: -20%;
+
+            // bottom: vw(186);
+            img {
+                animation: rotate 6s linear infinite;
+            }
+            @media(max-width:768px){
+                bottom: 35%;
+                left: 0%;
+            }
+        }
+
+        &._5 {
+            @include responsive(width, 136, 65);
+            bottom: 14%;
+            right: -4%;
+            img {
+                animation: rotate 7s linear infinite;
+            }
+            @media(max-width:768px){
+                bottom: 16.5%;
+                right: 0%;
+            }
+        }
+        &._6 {
+            @include responsive(width, 63, 35);
+            bottom: 38%;
+            right: -17%;
+            img {
+                animation: rotate 5s linear infinite;
+            }
+            @media(max-width:768px){
+                bottom: 56.5%;
+                right: -5%;
+            }
+        }
+    }
+}
+
+
+@keyframes rotate {
+    from {
+        transform: rotate(0deg);
+    }
+    to {
+        transform: rotate(-360deg);
+    }
+}
+.struct {
+    position: absolute;
+    top: 0;
+    left: 0;
+    @include responsive(padding-top, 50, 30);
+    @include responsive(padding-bottom, 50, 30);
+    min-height: 100vh;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    z-index: 3;
+
+    &__container {
+        width: 100%;
+    }
+
+    &__row {
+        display: flex;
+        align-items: center;
+        @include responsive(gap, 135, 50);
+
+        @media(max-width:768px){
+            flex-direction: column-reverse;
+        }
+    }
+
+    &__img-row {
+        overflow: clip;
+        display: flex;
+        @include responsive(max-height, 781, 394);
+        min-height: vw(781);
+        max-width: vw(470);
+        // height: auto;
+        // flex: auto;
+        
+        @media(max-width:768px){
+            max-width: 100%;
+            min-height: 0;
+        }
+    }
+
+    &__img {
+        @include responsive(width, 325, 203);
+        @include responsive(height, 450, 257);
+        // @include responsive(min-height, 450, 257);
+
+        img {
+            @include responsive(border-radius, 25, 25);
+            @include responsive(min-height, 450, 257);
+        }
+
+        &.two {
+            // @include responsive(padding-top, 0, 40);
+            position: sticky;
+            @include responsive(bottom, 40, 20);
+
+            margin-top: auto;
+
+            @include responsive(margin-left, -180, -48);
+
+            @media(max-width:768px){
+                @include responsive(height, 450, 297);
+                padding-top: vw(40, 390);
+            }
+        }
+    }
+
+    &__list {
+        // opacity: 0;
+        display: flex;
+        flex-direction: column;
+        @include responsive(width, 821, 300);
+        @include responsive(gap, 45, 15);
+        @media(max-width:768px){
+            margin-left: auto;
+            margin-right: auto;
+        }
+    }
+
+    &__item {
+        display: flex;
+        @include responsive(gap, 40, 24);
+    }
+
+    &__item-icon {
+        @include responsive(width, 62.9, 35.2);
+        @include responsive(min-width, 62.9, 35.2);
+        img {
+            width: 100%;
+            height: auto;
+        }
+    }
+
+    &__item-body {
+    }
+
+    &__item-title {
+        font-family: BalsamiqSans;
+        @include responsive(margin-bottom, 0, 4);
+        @include responsive(font-size, 42, 17);
+    }
+
+    &__item-text {
+        @include responsive(font-size, 22, 14);
+    }
+}
+.two {
+}

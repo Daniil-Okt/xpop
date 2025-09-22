@@ -1,0 +1,80 @@
+.partner {
+    @include responsive(padding-top, 140, 80);
+
+    &__container {
+    }
+
+    &__top {
+    }
+    &__title {
+        margin-bottom: 0;
+        @include responsive(font-size, 62, 20);
+    }
+
+    &__row {
+        display: grid;
+        @include responsive(gap, 40, 32);
+        grid-template-columns: 1fr 1fr;
+
+        @media(max-width:768px){
+            grid-template-columns: 1fr;
+        }
+    }
+
+    &__img {
+        height: 100%;
+        img {
+            @include responsive(border-radius, 25, 15);
+        }
+    }
+
+    &__body {
+        display: flex;
+        flex-direction: column;
+    }
+
+    &__text {
+        display: flex;
+        flex-direction: column;
+        @include responsive(gap, 22, 14);
+        @include responsive(margin-bottom, 80, 32);
+        text-align: left;
+    }
+
+    &__forms {
+        margin-top: auto;
+        display: flex;
+        flex-direction: column;
+        @include responsive(gap, 20, 10);
+    }
+
+    &__input {
+    }
+
+    &__forms-row {
+        display: grid;
+        @include responsive(gap, 40, 20);
+        grid-template-columns: 1fr 1fr;
+
+        @media(max-width:768px){
+            grid-template-columns: 1fr;
+        }
+    }
+
+    &__button.button {
+        @media(max-width:768px){
+            // font-size: vw(17, 390);
+            // padding-top: vw(15, 390);
+            // padding-bottom: vw(15, 390);
+        }
+    }
+
+    &__politic {
+    }
+
+    &__bot-icons {
+    }
+
+    &__bot-icon {
+    }
+}

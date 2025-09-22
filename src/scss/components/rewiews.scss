@@ -1,0 +1,125 @@
+.reviews {
+    @include responsive(margin-top, 140, 80);
+
+
+    &__content {
+        @include responsive(border-top-left-radius, 25, 15);
+        @include responsive(border-top-right-radius, 25, 15);
+        @include responsive(padding-top, 140, 80);
+        @include responsive(padding-bottom, 82, 79);
+        position: relative;
+        z-index: 1;
+        background: var(--pink);
+    }
+
+    &__fon {
+        position: absolute;
+        width: 100%;
+        top: 99.9%;
+        left: 0;
+
+        img {
+            width: 100%;
+        }
+    }
+    &__container {
+    }
+
+    &__top {
+        display: flex;
+    }
+
+    &__title-up {
+        @include responsive(margin-bottom, 80, 32);
+        margin-left: auto;
+        margin-right: auto;
+    }
+
+    &__slider {
+    }
+
+    &__wrapper {
+    }
+
+    &__slide {
+
+    }
+
+    &__btn-row {
+    }
+
+    &__btn-prev {
+    }
+
+    &__btn-next {
+    }
+
+    &__video {
+        width: 100%;
+
+        video {
+            @include responsive(border-bottom-left-radius, 25, 15);
+            @include responsive(border-bottom-right-radius, 25, 15);
+            @include responsive(min-height, 1077, 315);
+        }
+    }
+}
+
+
+.slide-rew {
+    width: vw(1135);
+    height: auto;
+
+    &:not(:last-child) {
+        @include responsive(margin-right, 40, 10);
+    }
+
+    @media(max-width:768px){
+        width: 100%;
+    }
+
+    &__body {
+        display: flex;
+        flex-direction: column;
+        height: 100%;
+        border-bottom: 4px solid #000;
+        @include responsive(border-radius, 15, 15);
+        background: var(--white);
+        @include responsive(border-width, 4, 3);
+        @include responsive(padding, 40, 16);
+    }
+
+    &__top {
+        display: flex;
+        justify-content: space-between;
+        @include responsive(margin-bottom, 50, 30);
+    }
+
+    &__img {
+        @include responsive(width, 124, 60);
+        @include responsive(height, 124, 60);
+        overflow: hidden;
+        border-radius: 50%;
+    }
+
+    &__str {
+        @include responsive(width, 199, 146);
+        img {
+            width: 100%;
+        }
+    }
+
+    &__bot {
+        margin-top: auto;
+    }
+
+    &__title {
+        @include responsive(font-size, 42, 20);
+        font-family: BalsamiqSans;
+        @include responsive(margin-bottom, 24, 20);
+    }
+
+    &__text {
+        @include responsive(font-size, 24, 17);
+    }
+}

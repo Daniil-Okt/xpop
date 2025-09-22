@@ -18,11 +18,12 @@
 
 
 // !TO VW:
-@function vw($value, $designWidth: 1920) {
+@function vw($value, $designWidth: 2400) {
   @return math.div($value, $designWidth) * 100vw;
 }
 
-$desktop-width: 1920;
+// $desktop-width: 1920;
+$desktop-width: 2400;
 
 // $tablet-width: 768;
 

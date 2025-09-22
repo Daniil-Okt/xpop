@@ -1,0 +1,75 @@
+.quest {
+    @include responsive(padding-top, 140, 80);
+
+    &__container {
+        display: flex;
+        flex-direction: column
+    }
+
+    &__title-up {
+        @include responsive(margin-bottom, 80, 32);
+        margin-left: auto;
+        margin-right: auto;
+    }
+
+    &__row {
+        width: 100%;
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        @include responsive(column-gap, 40, 20);
+        @include responsive(row-gap, 20, 16);
+
+        @media(max-width:768px){
+            grid-template-columns: 1fr;
+        }
+    }
+
+    &__item {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        @include responsive(gap, 60, 40);
+        @include responsive(padding-top, 20, 11);
+        @include responsive(padding-right, 40, 16);
+        @include responsive(padding-bottom, 20, 11);
+        @include responsive(padding-left, 40, 20);
+        background: var(--blue);
+        @include responsive(border-radius, 50, 50);
+        cursor: pointer;
+        transition: all 0.3s ease  0s;
+
+        @media(min-width:769px){
+            &:hover  {  
+                background-color: #94dcf8;
+
+                .quest__plus {
+                    transform: scale(1.07) rotate(5deg);
+                }
+            }
+        }
+        &:active {
+            transform: scale(0.98);
+        }
+
+        @media(min-width:769px){
+            &:last-child:nth-child(odd) {
+                transform: translateX(vw(470));
+            }
+        }
+    }
+
+    &__title {
+        @include responsive(font-size, 22, 17);
+    }
+
+    &__plus {
+        @include responsive(width, 60, 40);
+        @include responsive(min-width, 60, 40);
+    }
+}
+.title-quote {
+}
+.blue {
+}
+.plus {
+}

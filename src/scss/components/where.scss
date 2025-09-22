@@ -1,0 +1,81 @@
+.where {
+    @include responsive(padding-top, 140, 80);
+    @include responsive(padding-bottom, 140, 80);
+
+    &__container {
+    }
+    &__top {
+        display: flex;
+        justify-content: center;
+        @include adaptiveClamp(margin-bottom, 80, 32);
+        // margin-bottom: 0;
+    }
+
+    &__title-up {
+
+    }
+
+    &__slide {
+        @include responsive(width, 665, 193);
+        height: auto;
+
+        &:not(:last-child) {
+            @include responsive(margin-right, 40, 10);
+        }
+    }
+
+    &__slide-body {
+        display: block;
+        @include responsive(border-radius, 25, 25);
+        @include responsive(padding, 20, 16);
+        background-color: var(--blue);
+        height: 100%;
+        cursor: pointer;
+        transition: all 0.3s ease  0s;
+
+        .pink & {
+            background: var(--pink);
+        }
+
+
+        @media(min-width:769px){
+            &:hover  {  
+                transform: scale(1.02);
+            }
+        }
+        &:active {
+            transform: scale(0.98);
+        }
+
+    }
+
+    &__slide-icon {
+        @include responsive(width, 100, 60);
+        @include responsive(height, 100, 60);
+        @include responsive(margin-bottom, 90, 20);
+        border-radius: 50%;
+        overflow: hidden;
+    }
+
+    &__slide-title {
+        @include responsive(font-size, 42, 20);
+        font-family: BalsamiqSans;
+        color: #000;
+    }
+
+
+    &__bot-icons {
+        @include responsive(margin-top, 140, 80);
+        display: flex;
+        justify-content: center;
+        @include responsive(gap, 40, 10);
+    }
+
+    &__bot-icon {
+        border-radius: 50%;
+        overflow: hidden;
+        @include responsive(width, 165, 63.34);
+        @include responsive(height, 165, 63.34);
+    }
+}
+

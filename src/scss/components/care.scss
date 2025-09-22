@@ -1,6 +1,6 @@
 .care {
     @include responsive(padding-top, 172, 78);
-    @include responsive(padding-bottom, 140, 80);
+
     background: var(--blue-2);
 
     &__container {
@@ -34,20 +34,66 @@
         }
     }
 
+    &__content {
+        position: relative;
+        // overflow: clip;
+        @include responsive(padding-bottom, 140, 80);
+    }
     &__row {
-        // position: sticky !important;
-        // top: 0 !important;
+        position: sticky !important;
+        top: 15%;
         display: flex;
         @include responsive(gap, 57.25, 32);
-        width: max-content;
+        
+        @media(min-width:769px){
+            width: max-content;
+        }
+        @media(max-width:768px){
+            width: 100%;
+            flex-direction: column;
+            overflow: clip;
+        }
     }
 
     &__item {
+        position: relative;
+        z-index: 1;
+        display: flex;
         height: auto;
         width: vw(823.83);
-        img {
+
+        img, picture {
             margin-top: auto;
             width: 100%;
+        }
+
+        @media(max-width:768px){
+            width: auto;
+            position: sticky;
+            top: vw(170, 390);
+        }
+    }
+
+    &__item-fon {
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+
+        &.two {
+            z-index: 1;
+        }
+
+        &-img {
+            width: 100%;
+            height: 100%;
+            display: flex;
+            // z-index: 1;
+            img, picture {
+                margin-top: auto;
+                width: 100%;
+            }
         }
     }
 

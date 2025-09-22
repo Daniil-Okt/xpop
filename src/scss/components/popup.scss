@@ -11,7 +11,11 @@
 
   /** Установить свои значения */
   padding: rem(30) rem(10);
+  @include responsive(padding-left, 16, 16);
+  @include responsive(padding-right, 16, 16);
   background-color: rgba(#000, 50%);
+  backdrop-filter: blur(10px);
+  -webkit-backdrop-filter: blur(10px);
   z-index: 2000;
   transition: opacity 0.4s ease-in-out;
 
@@ -20,7 +24,7 @@
     pointer-events: auto;
 
     .popup__content {
-      transform: translateY(0);
+      transform: scale(1);
       opacity: 1;
     }
   }
@@ -39,12 +43,13 @@
     margin: 0 auto;
 
     /** Установить свои значения */
-    padding: rem(30) rem(50);
-    max-width: rem(690);
+    
     background-color: $white-100;
-    transform: translateY(rem(-200));
+    transform: scale(0.5);
     opacity: 0;
     transition: transform 0.2s ease-in-out, opacity 0.2s ease-in-out;
+
+
   }
 
   // .popup__close
@@ -52,15 +57,420 @@
     position: absolute;
 
     /** Установить свои значения */
-    top: rem(20);
-    right: rem(20);
-    width: rem(40);
-    height: rem(40);
+    @include responsive(top, 20, 10);
+    @include responsive(right, 20, 10);
+    @include responsive(width, 54, 30);
+    @include responsive(height, 54, 30);
+    border-radius: 50%;
+    overflow: hidden;
+    transition: all 0.3s ease  0s;
+
+    img {
+      width: 100%;
+      height: auto;
+    }
+
+    @media(min-width:769px){
+      &:hover  {  
+          transform: scale(1.05);
+      }
+    }
+    &:active {
+        transform: scale(0.98);
+    }
+  }
+}
+
+
+.popup-tara {
+  &__content {
+    background: var(--white);
+    @include responsive(border-radius, 25, 6);
+    @include responsive(padding-top, 78, 19);
+    @include responsive(padding-bottom, 209, 207);
+    @include responsive(padding-left, 77, 20);
+    @include responsive(padding-right, 77, 20);
+    max-width: vw(1512);
+
+    @media(max-width:768px){
+      max-width: 100%;
+    }
+  }
+
+  &__title {
+    text-align: center;
+    @include responsive(font-size, 62, 20);
+    @include responsive(margin-bottom, 84, 33);
+  }
+
+  &__row {
     display: flex;
-    justify-content: center;
+    @include responsive(gap, 40, 0);
+
+    @media(max-width:768px){
+        flex-direction: column-reverse;
+    }
+  }
+
+  &__plan {
+    @include responsive(width, 430, 235);
+    @include responsive(height, 430, 235);
+
+    @media(max-width:768px){
+        margin-left: auto;
+        margin-right: auto;
+    }
+  }
+
+  &__body {
+    @include responsive(max-width, 418, 240);
+  }
+
+  &__name {
+    @include responsive(font-size, 42, 18);
+    font-weight: 400;
+    @include responsive(margin-bottom, 21, 16);
+    text-align: left;
+  }
+
+  &__quantity {
+    @include responsive(font-size, 28, 17);
+    @include responsive(margin-bottom, 129, 24);
+  }
+
+  &__text {
+    display: flex;
+    flex-direction: column;
+    max-width: vw(310);
+    @include responsive(gap, 31, 24);
+
+    p {
+      text-align: left;
+    }
+
+    @media(max-width:768px){
+        max-width: 100%;
+    }
+  }
+
+  &__img-one {
+    position: absolute;
+    @include responsive(width, 471, 177);
+    @include responsive(height, 471, 177);
+    top: vw(102);
+    @include responsive(right, -72, 0);
+    z-index: 1;
+
+    @media(max-width:768px){
+        top: unset;
+        bottom: vw(30, 390);
+    }
+  }
+
+  &__img-two {
+    position: absolute;
+    @include responsive(width, 430, 199);
+    @include responsive(height, 430, 199);
+    @include responsive(bottom, 30, 19);
+    @include responsive(right, 184, 159);
+  
+  }
+}
+.bs-title {
+}
+
+
+
+
+
+.popup-vict {
+  @include responsive(padding-left, 16, 10);
+  @include responsive(padding-right, 16, 10);
+  &__content {
+    position: relative;
+    max-width: vw(1760);
+    @include responsive(min-height, 841, 752);
+    width: 100%;
+    background: none;
+
+    @media(max-width:768px){
+      max-width: 100%;
+    }
+
+    &._two {
+      @include responsive(min-height, 938, 752);
+    }
+  }
+
+  &__fon {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    img {
+      width: 100%;
+      height: 100%;
+    }
+  }
+
+  &__close {
+    @include responsive(right, 40, 100);
+    top: unset;
+    bottom: vw(243);
+    z-index: 2;
+
+    @media(max-width:768px){
+      bottom: unset;
+      top: vw(48, 390);
+    }
+  }
+
+  &__body {
+    position: relative;
+    z-index: 1;
+    width: 100%;
+    height: 1100%;
+    @include responsive(padding-top, 301, 308);
+    @include responsive(padding-left, 365, 29);
+    @include responsive(padding-right, 365, 39);
+    @include responsive(padding-bottom, 50, 50);
+
+
+    ._two & {
+      @include responsive(padding-top, 219, 123);
+      @include responsive(padding-left, 210, 43);
+      @include responsive(padding-right, 210, 48);
+    }
+
+  }
+
+  &__title {
+    @include responsive(margin-bottom, 80, 32);
+
+    ._two & {
+      @include responsive(margin-bottom, 20, 32);
+      @media(max-width:768px){
+          margin-right: 10%;
+      }
+    }
+  }
+
+  &__text {
+  }
+
+  &__bacterium {
+    @include responsive(margin-top, 30, 70);
+    @include responsive(margin-right, 70, 89);
+    margin-left: auto;
+    @include responsive(width, 162, 120);
+    img {
+      width: 100%;
+    }
+  }
+
+  &__img {
+    @include responsive(width, 603, 270);
+    @include responsive(margin-bottom, 20, 24);
+    margin-left: auto;
+    margin-right: auto;
+    img {
+      width: 100%;
+    }
+  }
+}
+
+
+.popup-quest {
+
+  &__content {
+    @include responsive(padding-top, 140, 80);
+    @include responsive(padding-bottom, 80, 30);
+    @include responsive(padding-left, 40, 16);
+    @include responsive(padding-right, 40, 16);
+    @include responsive(border-radius, 25, 15);
+    background: var(--blue);
+    @include responsive(max-width, 1760, 1760);
+  }
+
+  &__body {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+  }
+
+
+  &__title {
+    @include responsive(margin-bottom, 80, 32);
+    @include responsive(font-size, 62, 20);
+    @include responsive(max-width, 1270, 1000);
+    margin-left: auto;
+    margin-right: auto;
+
+  }
+
+  &__row {
+    display: flex;
+    flex-direction: column;
+    @include responsive(gap, 60, 34);
+  }
+
+  &__item {
+    position: relative;
+    @include responsive(max-width, 1515, 1515);
+
+    &.m-w {
+      @include responsive(max-width, 1355, 1355);
+    }
+  }
+
+  &__item-title {
+    @include responsive(font-size, 42, 17);
+    @include responsive(margin-bottom, 20, 16);
+    text-align: left;
+
+    &.m-b {
+      @include responsive(margin-bottom, 60, 30);
+    }
+  }
+  &__item-row {
+    display: flex;
     align-items: center;
-    background: transparent;
-    color: #000;
-    border-radius: rem(8);
+    @include responsive(gap, 20, 32);
+    @include responsive(margin-top, 13, 20);
+    @include responsive(margin-bottom, -110, 0);
+
+    @media(max-width:768px){
+        flex-direction: column;
+    }
+
+    .popup-quest__item-title {
+      margin-bottom: 0;
+    }
+  }
+  &__item-body {
+    @include responsive(max-width, 1115, 1000);
+    @include responsive(margin-left, 390, 0);
+  }
+
+  &__item-text {
+    display: flex;
+    flex-direction: column;
+    @include responsive(gap, 24, 20);
+
+    p {
+      @include responsive(font-size, 24, 17);
+
+      b {
+        font-family: BalsamiqSans;
+        font-weight: 400;
+      }
+
+      span.big {
+        display: inline-block;
+        @include responsive(font-size, 42, 20);
+        @include responsive(margin-top, 10, 5);
+      }
+
+
+      a {
+        color: var(--green);
+        transition: opacity 0.3s ease  0s;
+
+        @media(min-width:769px){
+            &:hover {
+                opacity: 0.7;
+            }
+        }
+      }
+    }  
+
+    &.m-b {
+      @include responsive(margin-bottom, 40, 20);
+    }
+  }
+
+
+  &__item-img {
+    @include responsive(margin-top, 60, 34);
+
+    img {
+      width: 100%;
+      object-fit: cover;
+      @include responsive(border-radius, 25, 15);
+
+    }
+
+    &.m-l {
+      @include responsive(margin-left, -92, 0);
+    }
+
+
+    &._5 {
+      @include responsive(max-width, 630, 1000);
+      @include responsive(min-width, 630, 0);
+      margin-top: 0;
+    }
+  }
+
+  &__item-bacter {
+    position: absolute;
+    img {
+      width: 100%;
+    }
+
+    &._1 {
+      width: vw(154);
+      top: vw(400);
+      left: vw(80);
+    }
+
+    &._2 {
+      width: vw(178);
+      top: vw(280);
+      left: vw(39);
+    }
+
+    &._3 {
+      width: vw(146);
+      top: vw(360);
+      right: vw(-171);
+    }
+    &._4 {
+      width: vw(167);
+      top: vw(150);
+      left: vw(80);
+    }
+
+    @media(max-width:768px){
+      display: none;
+    }
+  }
+
+  &__item-xyli {
+    position: absolute;
+    width: vw(491);
+    top: vw(200);
+    left: vw(-44);
+    img {
+      width: 100%;
+    }
+
+    @media(max-width:768px){
+      display: none;
+    }
+  }
+  &__tooth {
+    position: absolute;
+    width: vw(181);
+    top: vw(370);
+    right: vw(46.8);
+    img {
+      width: 100%;
+    }
+
+    @media(max-width:768px){
+      display: none;
+    }
   }
 }
