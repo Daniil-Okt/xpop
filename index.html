@@ -8,14 +8,14 @@
   <title>XyliPOP</title>
 
   <link rel="shortcut icon" href="favicon.ico" type="image/x-icon">
-  <link rel="stylesheet" href="css/main.min.css?_v=20250914202526">
+  <link rel="stylesheet" href="css/main.min.css?_v=20250922114900">
 
-  <script defer="defer" src="js/main.min.js?_v=20250914202526"></script>
+  <script defer="defer" src="js/main.min.js?_v=20250922114900"></script>
 </head>
 
   <body>
     <div class="wrapper">
-      <header class="header">
+      <header class="header" id="header">
   
   <div class="header__container">
     <a href="#" class="header__logo logo">
@@ -67,9 +67,11 @@
         <p class="about__text">
             Вкусный уход за полостью рта
         </p>
-        <a href="#signif" class="button about__button">
-            Узнать больше
-        </a>
+        <div class="about__btn-row">
+            <a href="#signif" class="button about__button">
+                Узнать больше
+            </a>
+        </div>
         <div class="about__img">
             <picture><source srcset="images/about/about-fon-mob.webp" type="image/webp"><img src="images/about/about-fon-mob.png" alt=""></picture>
         </div>
@@ -85,62 +87,64 @@
     </div>
 </div>
         <div class="acqua">
-    <div class="acqua__container">
-        <div class="acqua__xily">
-            <img src="images/acqua/xily.svg" alt="">
-        </div>
-
-        <div class="acqua__row">
-            <div class="acqua__item item-one">
-                <div class="green acqua__item-title one">
-                    Ксили
-                </div>
-                <div class="one acqua__dialog">
-                    <div class="acqua__dialog-fon">
-                        <picture>
-                            <source media="(max-width: 768px)" srcset="images/acqua/dialog-fon1-mob.png">
-                            <img loading="lazy" src="images/acqua/dialog-fon1.png" alt="">
-                        </picture>
+    <div class="acqua__body">
+        <div class="acqua__container">
+            <div class="acqua__xily">
+                <img src="images/acqua/xily.svg" alt="">
+            </div>
+    
+            <div class="acqua__row">
+                <div class="acqua__item item-one">
+                    <div class="green acqua__item-title one">
+                        Ксили
+                    </div>
+                    <div class="one acqua__dialog">
+                        <div class="acqua__dialog-fon">
+                            <picture>
+                                <source media="(max-width: 768px)" srcset="images/acqua/dialog-fon1-mob.png">
+                                <img loading="lazy" src="images/acqua/dialog-fon1.png" alt="">
+                            </picture>
+                            <div class="acqua__dialog-body">
+                                <p>Привет! Я Супергерой Ксили, защищаю ваши зубы от кариеса с помощью ксилита.</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="two acqua__dialog">
+                        <div class="acqua__dialog-fon">
+                            <picture>
+                                <source media="(max-width: 768px)" srcset="images/acqua/dialog-fon2-mob.png">
+                                <img loading="lazy" src="images/acqua/dialog-fon1.png" alt="">
+                            </picture>
+                        </div>
                         <div class="acqua__dialog-body">
-                            <p>Привет! Я Супергерой Ксили, защищаю ваши зубы от кариеса с помощью ксилита.</p>
+                            <p>
+                                Открывай плюсы <span class="plus"><img src="images/puls-pink.svg" alt=""></span>
+                                <br>и получай полезные подсказки
+                            </p>
                         </div>
                     </div>
                 </div>
-                <div class="two acqua__dialog">
-                    <div class="acqua__dialog-fon">
-                        <picture>
-                            <source media="(max-width: 768px)" srcset="images/acqua/dialog-fon2-mob.png">
-                            <img loading="lazy" src="images/acqua/dialog-fon1.png" alt="">
-                        </picture>
+                <div class="acqua__item item-two">
+                    <div class="two acqua__item-title green">
+                        Жихарева Екатерина врач-стоматолог
                     </div>
-                    <div class="acqua__dialog-body">
-                        <p>
-                            Открывай плюсы <span class="plus"><img src="images/puls-pink.svg" alt=""></span>
-                            <br>и получай полезные подсказки
-                        </p>
-                    </div>
-                </div>
-            </div>
-            <div class="acqua__item item-two">
-                <div class="green acqua__item-title two">
-                    Жихарева Екатерина врач-стоматолог
-                </div>
-                <div class="acqua__dialog three">
-                    <div class="acqua__dialog-fon">
-                        <picture>
-                            <source media="(max-width: 768px)" srcset="images/acqua/dialog-fon3-mob.png">
-                            <img loading="lazy" src="images/acqua/dialog-fon3.png" alt="">
-                        </picture>
-                        <div class="acqua__dialog-body">
-                            <p>При употреблении <span class="green">ксилита</span> слюноотделение усиливается: слюна смывает налёт, нейтрализует кислоту и помогает минерализации эмали</p>
+                    <div class="acqua__dialog three">
+                        <div class="acqua__dialog-fon">
+                            <picture>
+                                <source media="(max-width: 768px)" srcset="images/acqua/dialog-fon3-mob.png">
+                                <img loading="lazy" src="images/acqua/dialog-fon3.png" alt="">
+                            </picture>
+                            <div class="acqua__dialog-body">
+                                <p>При употреблении <span class="green">ксилита</span> слюноотделение усиливается: слюна смывает налёт, нейтрализует кислоту и помогает минерализации эмали</p>
+                            </div>
                         </div>
                     </div>
                 </div>
             </div>
-        </div>
-
-        <div class="acqua__doctor">
-            <picture><source srcset="images/acqua/doctor.webp" type="image/webp"><img src="images/acqua/doctor.png" alt=""></picture>
+    
+            <div class="acqua__doctor">
+                <picture><source srcset="images/acqua/doctor.webp" type="image/webp"><img src="images/acqua/doctor.png" alt=""></picture>
+            </div>
         </div>
     </div>
 </div>
@@ -159,20 +163,76 @@
     </div>
     <div class="care__container care__content">
         <div class="care__row">
-            <div class="care__item">
+            <div class="care__item" data-prlx-mouse-wrapper data-prlx-auto-wrapper>
                 <picture><source srcset="images/care/care-item2.webp" type="image/webp"><img src="images/care/care-item2.png" alt=""></picture>
+
+                <div class="care__item-fon" data-prlx-mouse data-prlx-dxr data-prlx-dyr>
+                    <div class="care__item-fon-img" data-prlx-auto>
+                        <picture><source srcset="images/care/care-item2-fon.webp" type="image/webp"><img src="images/care/care-item2-fon.png" alt=""></picture>
+                    </div>
+                </div>
+                <div class="two care__item-fon" data-prlx-mouse data-prlx-degx="-6">
+                    <div class="care__item-fon-img" data-prlx-auto data-prlx-auto-dxr data-prlx-auto-deg="-6">
+                        <picture><source srcset="images/care/care-item2-fon2.webp" type="image/webp"><img src="images/care/care-item2-fon2.png" alt=""></picture>
+                    </div>
+                </div>
             </div>
-            <div class="care__item">
+            <div class="care__item" data-prlx-mouse-wrapper data-prlx-auto-wrapper>
                 <picture><source srcset="images/care/care-item3.webp" type="image/webp"><img src="images/care/care-item3.png" alt=""></picture>
+
+                <div class="care__item-fon" data-prlx-mouse data-prlx-dxr data-prlx-dyr>
+                    <div class="care__item-fon-img" data-prlx-auto>
+                        <picture><source srcset="images/care/care-item3-fon.webp" type="image/webp"><img src="images/care/care-item3-fon.png" alt=""></picture>
+                    </div>
+                </div>
+                <div class="two care__item-fon" data-prlx-mouse data-prlx-degx="6">
+                    <div class="care__item-fon-img" data-prlx-auto data-prlx-auto-dxr data-prlx-auto-deg="6">
+                        <picture><source srcset="images/care/care-item3-fon2.webp" type="image/webp"><img src="images/care/care-item3-fon2.png" alt=""></picture>
+                    </div>
+                </div>
             </div>
-            <div class="care__item">
+            <div class="care__item" data-prlx-mouse-wrapper data-prlx-auto-wrapper>
                 <picture><source srcset="images/care/care-item4.webp" type="image/webp"><img src="images/care/care-item4.png" alt=""></picture>
+
+                <div class="care__item-fon" data-prlx-mouse data-prlx-dxr data-prlx-dyr>
+                    <div class="care__item-fon-img" data-prlx-auto>
+                        <picture><source srcset="images/care/care-item4-fon.webp" type="image/webp"><img src="images/care/care-item4-fon.png" alt=""></picture>
+                    </div>
+                </div>
+                <div class="two care__item-fon" data-prlx-mouse data-prlx-degx="-6">
+                    <div class="care__item-fon-img" data-prlx-auto data-prlx-auto-dxr data-prlx-auto-deg="-6">
+                        <picture><source srcset="images/care/care-item4-fon2.webp" type="image/webp"><img src="images/care/care-item4-fon2.png" alt=""></picture>
+                    </div>
+                </div>
             </div>
-            <div class="care__item">
+            <div class="care__item" data-prlx-mouse-wrapper data-prlx-auto-wrapper>
                 <picture><source srcset="images/care/care-item5.webp" type="image/webp"><img src="images/care/care-item5.png" alt=""></picture>
+
+                <div class="care__item-fon" data-prlx-mouse data-prlx-dxr data-prlx-dyr>
+                    <div class="care__item-fon-img" data-prlx-auto>
+                        <picture><source srcset="images/care/care-item5-fon.webp" type="image/webp"><img src="images/care/care-item5-fon.png" alt=""></picture>
+                    </div>
+                </div>
+                <div class="two care__item-fon" data-prlx-mouse data-prlx-degx="6">
+                    <div class="care__item-fon-img" data-prlx-auto data-prlx-auto-dxr data-prlx-auto-deg="6">
+                        <picture><source srcset="images/care/care-item5-fon2.webp" type="image/webp"><img src="images/care/care-item5-fon2.png" alt=""></picture>
+                    </div>
+                </div>
             </div>
-            <div class="care__item">
+            <div class="care__item" data-prlx-mouse-wrapper data-prlx-auto-wrapper>
                 <picture><source srcset="images/care/care-item1.webp" type="image/webp"><img src="images/care/care-item1.png" alt=""></picture>
+
+                <div class="care__item-fon" data-prlx-mouse data-prlx-dxr data-prlx-dyr>
+                    <div class="care__item-fon-img" data-prlx-auto>
+                        <picture><source srcset="images/care/care-item1-fon.webp" type="image/webp"><img src="images/care/care-item1-fon.png" alt=""></picture>
+                    </div>
+                </div>
+
+                <div class="two care__item-fon" data-prlx-mouse data-prlx-degx="-6">
+                    <div class="care__item-fon-img" data-prlx-auto data-prlx-auto-dxr data-prlx-auto-deg="-6">
+                        <picture><source srcset="images/care/care-item1-fon2.webp" type="image/webp"><img src="images/care/care-item1-fon2.png" alt=""></picture>
+                    </div>
+                </div>
             </div>
         </div>
     </div>
@@ -193,48 +253,55 @@
     </div>
 </div>
         <div class="victory">
-    <div class="victory__fon">
-        <picture>
-            <source media="(max-width: 768px)" srcset="images/victory/victory-fon-mob.svg">
-            <img loading="lazy" src="images/victory/victory-fon.svg" alt="">
-        </picture>
+    <div class="victory__body">
+        <div class="victory__fon">
+            <picture>
+                <source media="(max-width: 768px)" srcset="images/victory/victory-fon-mob.svg">
+                <img loading="lazy" src="images/victory/victory-fon.png" alt="">
+            </picture>
+        </div>
+        <div class="min-container victory__content">
+         
+            <div class="victory__tooth">
+                <img src="images/victory/victory__tooth.svg" alt="">
+    
+                <div class="victory__tooth-close">
+                    <img src="images/victory/victory__tooth-close.svg" alt="">
+                </div>
+            </div>
+    
+    
+            <div class="victory__xily">
+                <img src="images/victory/victory-xily.svg" alt="">
+            </div>
+    
+            <div class="_1 victory__bacterium">
+                <img src="images/victory/bacterium1.svg" alt="">
+            </div>
+            <div class="_2 victory__bacterium">
+                <img src="images/victory/bacterium2.svg" alt="">
+            </div>
+            <div class="_3 victory__bacterium">
+                <img src="images/victory/bacterium3.svg" alt="">
+            </div>
+            <div class="_4 victory__bacterium">
+                <img src="images/victory/bacterium4.svg" alt="">
+            </div>
+            
+    
+            <div class="plus victory__btn _1" data-type="popup-vict-1">
+                <img src="images/puls-pink.svg" alt="">
+            </div>
+            <div class="plus victory__btn _2" data-type="popup-vict-2">
+                <img src="images/puls-pink.svg" alt="">
+            </div>
+            <div class="plus victory__btn _3" data-type="popup-vict-3">
+                <img src="images/puls-pink.svg" alt="">
+            </div>
+        </div>
     </div>
-    
-     
-        <div class="victory__tooth">
-            <img src="images/victory/victory__tooth.svg" alt="">
-        </div>
-
-
-        <div class="victory__xily">
-            <img src="images/victory/victory-xily.svg" alt="">
-        </div>
-
-        <div class="_1 victory__bacterium">
-            <img src="images/victory/bacterium1.svg" alt="">
-        </div>
-        <div class="_2 victory__bacterium">
-            <img src="images/victory/bacterium2.svg" alt="">
-        </div>
-        <div class="_3 victory__bacterium">
-            <img src="images/victory/bacterium3.svg" alt="">
-        </div>
-        <div class="_4 victory__bacterium">
-            <img src="images/victory/bacterium4.svg" alt="">
-        </div>
-        
-
-        <div class="plus victory__btn _1" data-type="popup-vict-1">
-            <img src="images/puls-pink.svg" alt="">
-        </div>
-        <div class="plus victory__btn _2" data-type="popup-vict-2">
-            <img src="images/puls-pink.svg" alt="">
-        </div>
-        <div class="plus victory__btn _3" data-type="popup-vict-3">
-            <img src="images/puls-pink.svg" alt="">
-        </div>
-    
 </div>
+
         <div class="advant" id="advant">
     <div class="advant__container">
         <h2 class="title-quote blue advant__title-up">Преимущества XyliPop</h2>
@@ -912,63 +979,66 @@
       </main>
 
       <footer class="footer">
-  <div class="footer__container">
+  <div class="min-container footer__content">
+    <div class="footer__container">
 
-    <div class="footer__xyli">
-      <img src="images/foot-xyli.svg" alt="">
-    </div>
-    <div class="footer__top">
-      <div class="footer__logo">
-        <img src="images/logo-foot.svg" alt="">
+      <div class="footer__xyli">
+        <img src="images/foot-xyli.svg" alt="">
       </div>
-
-      <nav class="footer__menu">
-        <a href="#care" class="bs-link footer__menu-item">
-          Продукция
-        </a>
-        <a href="#advant" class="bs-link footer__menu-item">
-          Преимущества
-        </a>
-        <a href="#answer" class="bs-link footer__menu-item">
-          Вопросы и ответы
-        </a>
-        <a href="#partner" class="bs-link footer__menu-item">
-          Партнерам
-        </a>
-      </nav>
-    </div>
-
-    <div class="footer__form">
-      <div class="footer__form-title">
-        Подписаться на рассылку
+      <div class="footer__top">
+        <div class="footer__logo">
+          <img src="images/logo-foot.svg" alt="">
+        </div>
+  
+        <nav class="footer__menu">
+          <a href="#care" class="bs-link footer__menu-item">
+            Продукция
+          </a>
+          <a href="#advant" class="bs-link footer__menu-item">
+            Преимущества
+          </a>
+          <a href="#answer" class="bs-link footer__menu-item">
+            Вопросы и ответы
+          </a>
+          <a href="#partner" class="bs-link footer__menu-item">
+            Партнерам
+          </a>
+        </nav>
       </div>
-      <p class="footer__form-text">
-        Подписываясь, вы соглашаетесь получать
-        информационную рассылку от XyliPOP®
-      </p>
-      <form action="#" class="bot__item-input">
-        <input type="text" name="email" placeholder="Ваш E-mail" class="_req input-text bot__input">
-
-        <button type="submit" class="bot__button">
-            <svg width="60" height="60" viewBox="0 0 60 60" fill="none" xmlns="http://www.w3.org/2000/svg">
-              <path d="M30 60C13.4315 60 0 46.5685 0 30C0 13.4315 13.4315 0 30 0C46.5685 0 60 13.4315 60 30C60 46.5685 46.5685 60 30 60Z" fill="#F7A4BC"/>
-              <path d="M40.7071 30.7071C41.0976 30.3166 41.0976 29.6834 40.7071 29.2929L34.3431 22.9289C33.9526 22.5384 33.3195 22.5384 32.9289 22.9289C32.5384 23.3195 32.5384 23.9526 32.9289 24.3431L38.5858 30L32.9289 35.6569C32.5384 36.0474 32.5384 36.6805 32.9289 37.0711C33.3195 37.4616 33.9526 37.4616 34.3431 37.0711L40.7071 30.7071ZM20 30V31H40V30V29H20V30Z" fill="#020203"/>
-            </svg>
-        </button>
-      </form>
-    </div>
-
-    <div class="footer__tooth">
-      <img src="images/foot-tooth.svg" alt="">
-    </div>
-    <div class="footer__bot">
-      <p>Производитель:<br>Hager & Werken GmbH & Co. KG<br>Ackerstraße, 1, 47269, Duisburg, Германия<br>Teл.: +49 (203) 992-690, факс: +49 (203) 299-283<br>www.hagerwerken.de, www.miradent.de</p>
-      <div class="footer__row">
-        <p>Представительство в России и СНГ:<br>ООО «ХАГЕР ЕВРАЗИЯ»<br>115088, г. Москва, ул. 2-я Машиностроения, д. 27, стр. 6<br>Тел.: +7 (495) 255-09-02, info@miradent-russia.ru<br>www.miradent-russia.ru, www.xylit.ru</p>
-        <p>© Все права защищены © 2021-2025 г. XyliPOP® – зарегистрированный торговый знак.</p>
+  
+      <div class="footer__form">
+        <div class="footer__form-title">
+          Подписаться на рассылку
+        </div>
+        <p class="footer__form-text">
+          Подписываясь, вы соглашаетесь получать
+          информационную рассылку от XyliPOP®
+        </p>
+        <form action="#" class="bot__item-input">
+          <input type="text" name="email" placeholder="Ваш E-mail" class="_req input-text bot__input">
+  
+          <button type="submit" class="bot__button">
+              <svg width="60" height="60" viewBox="0 0 60 60" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <path d="M30 60C13.4315 60 0 46.5685 0 30C0 13.4315 13.4315 0 30 0C46.5685 0 60 13.4315 60 30C60 46.5685 46.5685 60 30 60Z" fill="#F7A4BC"/>
+                <path d="M40.7071 30.7071C41.0976 30.3166 41.0976 29.6834 40.7071 29.2929L34.3431 22.9289C33.9526 22.5384 33.3195 22.5384 32.9289 22.9289C32.5384 23.3195 32.5384 23.9526 32.9289 24.3431L38.5858 30L32.9289 35.6569C32.5384 36.0474 32.5384 36.6805 32.9289 37.0711C33.3195 37.4616 33.9526 37.4616 34.3431 37.0711L40.7071 30.7071ZM20 30V31H40V30V29H20V30Z" fill="#020203"/>
+              </svg>
+          </button>
+        </form>
+      </div>
+  
+      <div class="footer__tooth">
+        <img src="images/foot-tooth.svg" alt="">
+      </div>
+      <div class="footer__bot">
+        <p>Производитель:<br>Hager & Werken GmbH & Co. KG<br>Ackerstraße, 1, 47269, Duisburg, Германия<br>Teл.: +49 (203) 992-690, факс: +49 (203) 299-283<br>www.hagerwerken.de, www.miradent.de</p>
+        <div class="footer__row">
+          <p>Представительство в России и СНГ:<br>ООО «ХАГЕР ЕВРАЗИЯ»<br>115088, г. Москва, ул. 2-я Машиностроения, д. 27, стр. 6<br>Тел.: +7 (495) 255-09-02, info@miradent-russia.ru<br>www.miradent-russia.ru, www.xylit.ru</p>
+          <p>© Все права защищены © 2021-2025 г. XyliPOP® – зарегистрированный торговый знак.</p>
+        </div>
       </div>
     </div>
   </div>
+
 </footer>
 
       <div class="button-up">
