@@ -27,7 +27,7 @@
         @include responsive(max-height, 320, 112.87);
         overflow: hidden;
         font-weight: 700;
-        @include responsive(font-size, 90, 31);
+        @include responsive(font-size, 48, 28);
         text-align: center;
         color: var(--white);
         width: auto;
@@ -51,8 +51,12 @@
         }
 
         &.img-one {
-            @include responsive(width, 455, 229);
-            @include responsive(max-width, 455, 229);
+            width: vw(540);
+            max-width: vw(540);
+            @media(max-width:768px){
+                width: 100%;
+                max-width: 100%;
+            }
         }
 
         &.img-two {
