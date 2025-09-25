@@ -1,10 +1,10 @@
 .acqua {
     position: relative;
     background: var(--blue-2);
-    min-height: vw(2000);
+    min-height: vw(1400);
 
     @media(max-width:768px){
-        min-height: vw(2000, 390);
+        min-height: vw(1400, 390);
     }
 
     &__body {

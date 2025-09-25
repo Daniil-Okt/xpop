@@ -349,3 +349,38 @@ if (buttonUp) {
 
 
 
+
+
+
+
+document.addEventListener('DOMContentLoaded', function() {
+    function initExclusiveCheckboxGroup(dataName) {
+        document.addEventListener('click', function(event) {
+            const clickedElement = event.target.closest(`[data-name="${dataName}"]`);
+            
+            if (clickedElement) {
+                const clickedCheckbox = clickedElement.querySelector('input[type="checkbox"]');
+                
+                if (clickedCheckbox) {
+                    const allElements = document.querySelectorAll(`[data-name="${dataName}"]`);
+                    
+                    if (clickedCheckbox.checked) {
+                        clickedCheckbox.checked = false;
+                    } else {
+                        allElements.forEach(element => {
+                            const checkbox = element.querySelector('input[type="checkbox"]');
+                            if (checkbox && checkbox !== clickedCheckbox) {
+                                checkbox.checked = false;
+                            }
+                        });
+                        
+                        clickedCheckbox.checked = true;
+                    }
+                }
+            }
+        });
+    }
+    
+    initExclusiveCheckboxGroup('add_side_block_one');
+    initExclusiveCheckboxGroup('add_side_block_two');
+});
