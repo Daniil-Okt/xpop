@@ -5,7 +5,7 @@
   &__content {
     position: relative;
     @include responsive(padding-top, 140, 77);
-    @include responsive(padding-bottom, 40, 16);
+    @include responsive(padding-bottom, 40, 0);
   }
   // .footer__container
   &__container {
@@ -71,14 +71,14 @@
   &__form {
     @include responsive(margin-left, 470, 0);
     max-width: vw(705);
-    @include responsive(margin-bottom, 353, 80);
+    @include responsive(margin-bottom, 275, 50);
     @media(max-width:768px){
         max-width: 100%;
     }
   }
 
   &__tooth {
-    @include responsive(width, 1054, 358);
+    @include responsive(width, 1012, 358);
     pointer-events: none;
     img {
       width: 100%;
@@ -90,7 +90,7 @@
         bottom: vw(-357);
     }
     @media(max-width:768px){
-        margin-bottom: vw(40, 390);
+        margin-top: vw(15, 390);
     }
   }
 
@@ -107,24 +107,47 @@
   }
 
   &__bot {
-    display: flex;
-    flex-direction: column;
-    @include responsive(gap, 40, 16);
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    @include responsive(row-gap, 20, 15);
+    @include responsive(column-gap, 99, 32);
+    @include responsive(width, 823, 335);
 
-    p {
-      @include responsive(max-width, 325, 256);
-      @include responsive(font-size, 14, 11);
-      color: var(--white);
+    @media(max-width:768px){
+        max-width: 100%;
+        display: flex;
+        flex-direction: column-reverse;
     }
+
+  
     a {
       color: var(--white);
+    }
+  }
+
+  &__bot-row {
+    display: flex;
+    flex-direction: column;
+    @include responsive(row-gap, 20, 15);
+
+    &.two {
+      @include responsive(margin-top, 64, 15);
+    }
+
+    p {
+      @include responsive(font-size, 14, 11);
+      color: var(--white);
+
+      @media(max-width:768px){
+          max-width: vw(260, 390);
+      }
     }
   }
 
   &__row { 
     display: flex;
     @include responsive(gap, 100, 16);
-   
+
     @media(max-width:768px){
 
       flex-direction: column;
@@ -140,19 +163,33 @@
   }
 
 
-  .bot {
+		&__pdf {
+      display: flex;
+      flex-direction: column;
+      @include responsive(gap, 15, 15);
 
-    &__item-input {
-    }
-  
-    &__input {
-      background: var(--white);
-    }
-  
-    &__button {
-    }
-  }
-}
-.bs-link {
+      @media(max-width:768px){
+        margin-bottom: vw(17, 390);
+      }
+		}
+
+		&__pdf-title {
+      display: flex;
+      line-height: 120%;
+      @include responsive(font-size, 18, 17);
+      @include responsive(margin-bottom, 5, 0);
+      @include responsive(gap, 20, 14.5);
+      font-family: BalsamiqSans;
+
+      svg {
+        @include responsive(min-width, 30, 29);
+        @include responsive(width, 30, 29);
+        height: auto;
+      }
+		}
+
+		&__pdf-link {
+      @include responsive(font-size, 17, 11);
+		}
 }
 

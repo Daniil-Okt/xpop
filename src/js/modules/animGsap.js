@@ -318,40 +318,50 @@ export function animGsap() {
             if (!stagesItems.length) {
                 return;
             }
-
+    
             // Устанавливаем начальное состояние
             gsap.set(stagesItems, {
-                // y: '100px',
-                // opacity: 0,
                 willChange: 'transform, opacity'
             });
-
-
+    
             // Создаем анимацию для каждого элемента
             stagesItems.forEach((item, index) => {
+                if (index < stagesItems.length - 1) {
+                    let heightItem = item.offsetHeight;
+                    console.log(heightItem);
                     
-
-                    if (index < stagesItems.length - 1) {
-                        let heightItem = item.offsetHeight;
-                        console.log(heightItem)
-                        gsap.to(item, {
-                            scale: '0.9',
-                            // opacity: 0,
-                            // y: '-0%',
-                            
-
+                    // Находим текстовый элемент внутри текущего item
+                    const textElement = item.querySelector('.care__item-text');
+                    
+                    gsap.to(item, {
+                        scale: '0.9',
+                        scrollTrigger: {
+                            trigger: stagesItems[index + 1],
+                            start: `top top+=${heightItem + 140}px`,
+                            end: "top 130px", 
+                            scrub: true,
+                            markers: false,
+                            invalidateOnRefresh: true,
+                        },
+                    });
+                    
+                    // Добавляем анимацию opacity для текстового элемента
+                    if (textElement) {
+                        gsap.to(textElement, {
+                            opacity: 0,
                             scrollTrigger: {
                                 trigger: stagesItems[index + 1],
-                                start: `top top+=${heightItem + 140}px`,  // Когда верх блока появляется у нижней границы окна
+                                start: `top top+=${heightItem + 140}px`,
                                 end: "top 130px", 
-                                scrub: true,          // Плавная привязка к скроллу
-                                markers: false,       // Отключить маркеры в продакшене
+                                scrub: true,
+                                markers: false,
                                 invalidateOnRefresh: true,
                             },
                         });
                     }
+                }
             });
-
+    
             // Обновляем ScrollTrigger после создания всех анимаций
             ScrollTrigger.refresh();
         }

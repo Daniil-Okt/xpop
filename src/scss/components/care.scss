@@ -52,6 +52,7 @@
             width: 100%;
             flex-direction: column;
             overflow: clip;
+            padding-bottom: rem(10);
         }
     }
 
@@ -86,6 +87,7 @@
         }
 
         &-img {
+            position: relative;
             width: 100%;
             height: 100%;
             display: flex;
@@ -97,6 +99,31 @@
         }
     }
 
+    &__plus {
+        position: absolute;
+        z-index: 2;
+        @include responsive(top, 403, 168.85);  
+        @include responsive(right, 251, 110.9);
+        @include responsive(width, 52.5, 22.87);
+        @include responsive(height, 52.5, 22.87);
+
+        img {
+            width: 100%;
+        }
+    }
+
+
+    &__item-text {
+        position: absolute;
+        @include responsive(bottom, -13, -10);
+        left: 50%;
+        transform: translateX(-50%);
+        font-weight: 400;
+        font-weight: 700;
+        @include responsive(font-size, 20, 10);
+        line-height: 150%;
+        font-family: BalsamiqSans;
+    }
     
 }
 .title-quote {

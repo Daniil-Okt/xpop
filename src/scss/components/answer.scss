@@ -20,7 +20,7 @@
         @include responsive(gap, 40, 16);
 
         @media(max-width:768px){
-            flex-direction: column;
+            flex-direction: column-reverse;
         }
     }
 

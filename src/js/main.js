@@ -384,3 +384,26 @@ document.addEventListener('DOMContentLoaded', function() {
     initExclusiveCheckboxGroup('add_side_block_one');
     initExclusiveCheckboxGroup('add_side_block_two');
 });
+
+
+document.addEventListener('DOMContentLoaded', function() {
+    const cookieBanner = document.querySelector('.cookie');
+    const cookieButton = document.querySelector('.cookie__button');
+    
+    // Проверяем, было ли уже принято согласие
+    const isCookieAccepted = localStorage.getItem('cookieAccepted');
+    
+    if (isCookieAccepted === 'true') {
+        // Если согласие уже дано, скрываем баннер
+        cookieBanner.classList.add('hidden');
+    }
+    
+    // Обработчик клика на кнопку
+    cookieButton.addEventListener('click', function() {
+        // Добавляем класс для анимации скрытия
+        cookieBanner.classList.add('hidden');
+        
+        // Сохраняем в localStorage, что согласие дано
+        localStorage.setItem('cookieAccepted', 'true');
+    });
+});
