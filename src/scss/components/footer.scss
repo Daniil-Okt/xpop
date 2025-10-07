@@ -79,6 +79,7 @@
 
   &__tooth {
     @include responsive(width, 1012, 358);
+    @include responsive(height, 1089, 197);
     pointer-events: none;
     img {
       width: 100%;

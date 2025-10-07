@@ -205,7 +205,8 @@ form {
     @include responsive(font-size, 16, 12);
     color: #2d2d2d;
     @include responsive(margin-top, 20, 10);
-
+    cursor: pointer;
+    
     &__input {
         display: none;
 
