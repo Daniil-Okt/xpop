@@ -140,6 +140,24 @@ const rewiewsSlider = new Swiper('.reviews__slider', {
   },
 });
 
+const popupBlogSlider = new Swiper('.popup-blog__slider', {
+    speed: 1200,
+    spaceBetween: 0,
+    slidesPerView: 'auto',
+    modules: [Navigation],
+  
+    navigation: {
+        prevEl: ".popup-blog__btn-prev",
+        nextEl: ".popup-blog__btn-next"
+    },
+
+    // breakpoints: {
+    //         769: {
+    //             slidesPerView: 3,
+    //         }
+    // },
+  });
+
 
 // const swiper = new Swiper('.swiper', {
 //   speed: 800,
@@ -390,20 +408,49 @@ document.addEventListener('DOMContentLoaded', function() {
     const cookieBanner = document.querySelector('.cookie');
     const cookieButton = document.querySelector('.cookie__button');
     
-    // Проверяем, было ли уже принято согласие
     const isCookieAccepted = localStorage.getItem('cookieAccepted');
     
     if (isCookieAccepted === 'true') {
-        // Если согласие уже дано, скрываем баннер
         cookieBanner.classList.add('hidden');
     }
     
-    // Обработчик клика на кнопку
     cookieButton.addEventListener('click', function() {
-        // Добавляем класс для анимации скрытия
         cookieBanner.classList.add('hidden');
-        
-        // Сохраняем в localStorage, что согласие дано
         localStorage.setItem('cookieAccepted', 'true');
+    });
+});
+
+
+document.addEventListener('DOMContentLoaded', function() {
+    const button = document.querySelector('.blog__button');
+    const buttonRow = document.querySelector('.blog__btn-row');
+    const blogGrid = document.querySelector('.blog__grid');
+    const blogItems = blogGrid.querySelectorAll('.blog__item');
+    
+    let visibleItem = 6;
+
+    blogItems.forEach((item, index) => {
+        if (index >= 3) {
+            item.classList.remove('visible');
+        } else {
+            item.classList.add('visible');
+        }
+    });
+    
+    button.addEventListener('click', function() {
+        
+        blogItems.forEach((item, index) => {
+            if (index < visibleItem) {
+                item.classList.add('visible');
+                
+                
+            }
+        });
+
+        if (visibleItem >= blogItems.length - 1) {
+            buttonRow.classList.add('hidden');
+        }
+
+        visibleItem += 3;
     });
 });

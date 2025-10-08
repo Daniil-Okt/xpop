@@ -48,7 +48,7 @@ a, .bs-link {
     background-color: var(--green);
     @include responsive(border-radius, 50, 50);
     transition: all 0.3s ease  0s;
-
+    cursor: pointer;
 
 
     @media(min-width:769px){
@@ -206,7 +206,7 @@ form {
     color: #2d2d2d;
     @include responsive(margin-top, 20, 10);
     cursor: pointer;
-    
+
     &__input {
         display: none;
 
@@ -279,4 +279,8 @@ form {
             transform: scale(0.98);
         }
     }
+}
+
+.swiper-button-lock {
+    // opacity: 0;
 }

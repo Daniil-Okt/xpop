@@ -7,11 +7,12 @@ class PopupManager extends Popup {
     const defaultOptions = {
       isOpenClass: 'is-open',
       buttonCloseName: 'button-close',
-      visibilityDelay: 3000, // 3 секунды задержки
+      visibilityDelay: 4000, // 3 секунды задержки
     };
 
     this.options = { ...defaultOptions, ...options };
     this.timers = new Map(); // Хранилище таймеров для каждого попапа
+    this.currentOpenPopup = null; // Текущий открытый попап
 
     this.init();
     this.addEventListeners();
@@ -29,20 +30,26 @@ class PopupManager extends Popup {
   }
 
   togglePopup({ target }) {
+    // Ищем кнопки открытия как в основном документе, так и внутри открытых попапов
     const targetDataTypeElement = target.closest('[data-type]');
 
-    if (targetDataTypeElement && !target.closest('[data-popup]')) {
+    if (targetDataTypeElement) {
       const popupName = targetDataTypeElement.dataset.type;
       const popup = this.getPopupBySelector(popupName);
 
       if (popup) {
-        this.isOpenElements.forEach((modal) => this.closePopup(modal));
+        // Закрываем текущий открытый попап, если он есть
+        if (this.currentOpenPopup && this.currentOpenPopup !== popup) {
+          this.closePopup(this.currentOpenPopup);
+        }
+        
         this.openPopup(popup);
         this.toggleBodyLock(true);
+        return; // Прерываем выполнение, чтобы не мешать другим обработкам
       }
     }
 
-    // Проверяем клик по кнопке закрытия
+    // Проверяем клик по кнопке закрытия (работает везде)
     const targetCloseElement = target.closest(`.${this.options.buttonCloseName}`);
     
     if (targetCloseElement) {
@@ -51,9 +58,10 @@ class PopupManager extends Popup {
         this.closePopup(popupToClose);
         this.toggleBodyLock(false);
       }
+      return; // Прерываем выполнение после закрытия
     }
 
-    // Проверяем клик вне контента попапа (заменяет data-close-overlay)
+    // Проверяем клик вне контента попапа (работает для всех открытых попапов)
     const isOverlayClick = this.isOverlayClick(target);
     if (isOverlayClick) {
       const popupToClose = target.closest('[data-popup]');
@@ -64,16 +72,22 @@ class PopupManager extends Popup {
     }
   }
 
-  // Новый метод: проверяет, является ли клик кликом по оверлею (вне контента)
+  // Улучшенный метод для проверки клика по оверлею
   isOverlayClick(target) {
-    const popup = target.closest('[data-popup]');
-    if (!popup) return false;
+    // Ищем все открытые попапы
+    const openPopups = document.querySelectorAll(`[data-popup].${this.options.isOpenClass}`);
+    
+    for (const popup of openPopups) {
+      const popupContent = popup.querySelector('.popup__content');
+      if (!popupContent) continue;
 
-    const popupContent = popup.querySelector('.popup__content');
-    if (!popupContent) return false;
-
-    // Клик считается по оверлею, если он НЕ внутри .popup__content
-    return !popupContent.contains(target);
+      // Проверяем, что клик был внутри этого попапа, но вне его контента
+      if (popup.contains(target) && !popupContent.contains(target)) {
+        return true;
+      }
+    }
+    
+    return false;
   }
 
   getPopupBySelector(popupName) {
@@ -99,6 +113,12 @@ class PopupManager extends Popup {
     setTimeout(() => {
       popup.classList.add(this.options.isOpenClass);
       popup.setAttribute('aria-hidden', 'false');
+      
+      // Сохраняем ссылку на текущий открытый попап
+      this.currentOpenPopup = popup;
+      
+      // Добавляем обработчики для кнопок внутри этого попапа
+      this.addPopupInnerListeners(popup);
     }, 100);
   }
 
@@ -106,6 +126,11 @@ class PopupManager extends Popup {
     // Убираем класс открытия
     popup.classList.remove(this.options.isOpenClass);
     popup.setAttribute('aria-hidden', 'true');
+    
+    // Сбрасываем текущий открытый попап, если закрываем его
+    if (this.currentOpenPopup === popup) {
+      this.currentOpenPopup = null;
+    }
     
     // Отменяем предыдущий таймер если есть
     this.clearPopupTimer(popup);
@@ -118,6 +143,40 @@ class PopupManager extends Popup {
     
     // Сохраняем ID таймера для этого попапа
     this.timers.set(popup, timerId);
+  }
+
+  // Новый метод: добавляет обработчики для кнопок внутри попапа
+  addPopupInnerListeners(popup) {
+    // Находим все кнопки открытия внутри этого попапа
+    const innerOpenButtons = popup.querySelectorAll('[data-type]');
+    
+    innerOpenButtons.forEach(button => {
+      // Убираем старые обработчики чтобы избежать дублирования
+      button.removeEventListener('click', this.handleInnerButtonClick);
+      // Добавляем новый обработчик
+      button.addEventListener('click', this.handleInnerButtonClick.bind(this));
+    });
+  }
+
+  // Обработчик для кнопок внутри попапов
+  handleInnerButtonClick(event) {
+    event.preventDefault();
+    event.stopPropagation(); // Останавливаем всплытие чтобы не мешать основному обработчику
+    
+    const button = event.currentTarget;
+    const popupName = button.dataset.type;
+    const popup = this.getPopupBySelector(popupName);
+
+    if (popup) {
+      // Закрываем текущий попап
+      if (this.currentOpenPopup) {
+        this.closePopup(this.currentOpenPopup);
+      }
+      
+      // Открываем новый попап
+      this.openPopup(popup);
+      // Блокировка body уже активна, не нужно вызывать toggleBodyLock снова
+    }
   }
 
   clearPopupTimer(popup) {
@@ -136,7 +195,13 @@ class PopupManager extends Popup {
       popup.setAttribute('aria-hidden', 'true');
       popup.style.visibility = 'hidden';
     });
+    this.currentOpenPopup = null;
     this.toggleBodyLock(false);
+  }
+
+  // Получить текущий открытый попап
+  getCurrentOpenPopup() {
+    return this.currentOpenPopup;
   }
 
   // Очистка всех таймеров при уничтожении экземпляра
@@ -145,9 +210,18 @@ class PopupManager extends Popup {
       clearTimeout(timerId);
     });
     this.timers.clear();
+    this.currentOpenPopup = null;
     
     // Убираем обработчики событий
     document.removeEventListener('click', this.togglePopup.bind(this));
+    
+    // Убираем все внутренние обработчики
+    this.popups.forEach(popup => {
+      const innerButtons = popup.querySelectorAll('[data-type]');
+      innerButtons.forEach(button => {
+        button.removeEventListener('click', this.handleInnerButtonClick);
+      });
+    });
   }
 }
 
