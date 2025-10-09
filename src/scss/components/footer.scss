@@ -87,7 +87,7 @@
 
     @media(min-width:769px){
         position: absolute;
-        right: vw(38);
+        right: vw(10);
         bottom: vw(-357);
     }
     @media(max-width:768px){
@@ -111,8 +111,8 @@
     display: grid;
     grid-template-columns: 1fr 1fr;
     @include responsive(row-gap, 20, 15);
-    @include responsive(column-gap, 99, 32);
-    @include responsive(width, 823, 335);
+    @include responsive(column-gap, 80, 32);
+    @include responsive(width, 875, 335);
 
     @media(max-width:768px){
         max-width: 100%;
