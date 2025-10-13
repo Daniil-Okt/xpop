@@ -88,7 +88,7 @@ export function animGsap() {
                     ease: 'power2.out'
                 },0
             )
-        }, isWeb ? 3000 : 1000);
+        }, isWeb ? 2500 : 1000);
 
         
     }
