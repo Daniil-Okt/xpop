@@ -1,0 +1,117 @@
+.resear {
+    @include responsive(padding-top, 140, 80);
+
+    &__container {
+    }
+
+    &__top {
+    }
+
+    &__title {
+        @include responsive(margin-bottom, 80, 16);
+    }
+
+    &__row {
+        display: grid;
+        @include responsive(gap, 40, 16);
+        grid-template-columns: 1fr 1fr;
+
+        @media(max-width:768px){
+            grid-template-columns: 1fr;
+        }
+    }
+
+    &__img {
+        @include responsive(margin-top, -37, 57);
+        @include responsive(height, 1102, 1171);
+        
+        @media(max-width:768px){
+            margin-left: vw(-16, 390);
+        }
+        img {
+            width: 100%;
+
+            @media(max-width:768px){
+                width: vw(374, 390);
+            }
+        }
+    }
+}
+
+.item-resear {
+    @include responsive(padding, 40, 16);
+    @include responsive(border-radius, 25, 10);
+    background: var(--blue-2);
+
+    &.item-top {
+        @include responsive(margin-bottom, 40, 16);
+    }
+    &__row {
+        display: flex;
+        @include responsive(gap, 40, 32);
+
+        @media(max-width:768px){
+            flex-direction: column;
+        }
+    }
+
+    &__img {
+        img {
+            @include responsive(border-radius, 20, 8);
+            width: vw(827);
+            @include responsive(height, 530, 400);
+            object-fit: cover;
+
+            @media(max-width:768px){
+                width: 100%;
+            }
+        }
+    }
+
+    &__body {
+        display: flex;
+        flex-direction: column;
+        @include responsive(gap, 18, 16);
+    }
+
+    &__title {
+        @include responsive(font-size, 42, 20);
+        font-family: BalsamiqSans;
+
+
+        &.m-b {
+            @include responsive(margin-bottom, 47, 16);
+        }
+    }
+
+    &__text {
+        display: flex;
+        flex-direction: column;
+        @include responsive(gap, 22, 18);
+        @include responsive(font-size, 22, 17);
+
+        p.m-w {
+            max-width: vw(655);
+
+            @media(max-width:768px){
+                max-width: 100%;
+            }
+
+    
+            b {
+                font-family: BalsamiqSans;
+            }
+        }
+
+        &.l-h {
+            p {
+                line-height: 130%;
+            }
+        }
+    }
+}
+.item-top {
+}
+.green {
+}
+
