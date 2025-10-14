@@ -383,6 +383,16 @@
             }
         }
       }
+
+      .touch {
+        position: relative;
+        @include responsive(font-size, 42, 20);
+        line-height: 0.5;
+        @include responsive(margin-left, 10, 6);
+        @include responsive(margin-right, 5, 2.5);
+        @include responsive(top, 7, 3.5);
+        display: inline-block;
+      }
     }  
 
     &.m-b {
@@ -410,6 +420,9 @@
       @include responsive(max-width, 630, 1000);
       @include responsive(min-width, 630, 0);
       margin-top: 0;
+    }
+    &._tb {
+      @include responsive(max-width, 850, 850);
     }
   }
 
